@@ -79,7 +79,7 @@
                 </div>
             @endif
             <div>
-                Ciao a tutti
+                Ciao a tutti da boolean
             </div>
 
         </div>
