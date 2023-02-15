@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,9 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
- mix.js('resources/js/app.js', 'public/js')
+mix.js("resources/js/front.js", "public/js")
+    .js("resources/js/back.js", "public/js")
     .vue()
-    .sass('resources/sass/app.scss', 'public/css')
+    .sass("resources/sass/back.scss", "public/css")
     .options({
         processCssUrls: false,
-    });
+    })
+    .copyDirectory(
+        "./node_modules/@fortawesome/fontawesome-free/webfonts/*",
+        "./dist/fonts/font-awesome"
+    );
