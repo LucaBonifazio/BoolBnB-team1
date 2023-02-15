@@ -27,7 +27,7 @@ class CreateApartmentsTable extends Migration
             $table->string('uploaded_image', 500)->nullable();
             $table->boolean('sponsored')->default(false);
             $table->boolean('visible')->default(true);
-            
+
             $table->timestamps();
         });
     }
