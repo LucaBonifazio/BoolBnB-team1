@@ -79,8 +79,7 @@
                 </div>
             @endif
             <div>
-                Ciao a tutti da boolean xxxuuu ciaoooooooooooo <br>
-                Sono un branch?
+                Proviamo a fixare il seeder
             </div>
 
         </div>
