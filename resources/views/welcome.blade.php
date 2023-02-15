@@ -78,8 +78,10 @@
                     @endauth
                 </div>
             @endif
+            <div>
+                Ciao a tutti
+            </div>
 
-            
         </div>
     </body>
 </html>
