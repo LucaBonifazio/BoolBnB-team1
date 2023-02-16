@@ -16,9 +16,9 @@ class Apartment extends Model
         return $this->hasMany('App\View');
     }
 
-    // public function user() {
-    //     return $this->belongsTo('App\User');
-    // }
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 
     public function sponsorship()
     {
