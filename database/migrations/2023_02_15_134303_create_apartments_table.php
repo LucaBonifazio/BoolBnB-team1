@@ -15,17 +15,23 @@ class CreateApartmentsTable extends Migration
     {
         Schema::create('apartments', function (Blueprint $table) {
             $table->id();
+            //$table->foreignId('user_id')->constrained();
+            //$table->foreignId('sponsorship_id')->nullable()->constrained();
             $table->string('title', 100);
             $table->string('slug', 100);
-            $table->unsignedTinyInteger('rooms');
-            $table->unsignedTinyInteger('beds');
-            $table->unsignedTinyInteger('bathrooms');
-            $table->unsignedMediumInteger('square_metres');
-            $table->string('address', 250);
-            $table->string('image', 500);
+            $table->unsignedTinyInteger('n_rooms');
+            $table->unsignedTinyInteger('n_beds');
+            $table->unsignedTinyInteger('n_bathrooms');
+            $table->unsignedTinyInteger('square_metres');
+            $table->string('picture', 500)->default("https://www.creativefabrica.com/wp-content/uploads/2020/01/23/house-icon-Graphics-1-2.jpg");
             $table->string('uploaded_image', 500)->nullable();
-            $table->boolean('sponsored')->default(false);
-            $table->boolean('visible')->default(true);
+            $table->boolean('visibility')->default(true);
+            $table->string('address', 250);
+            $table->float('latitude', 7 ,5)->nullable();
+            $table->float('longitude', 7 ,5)->nullable();
+            $table->string('state', 100);
+            $table->string('city', 200);
+            $table->unsignedTinyInteger('apartment_number');
             $table->timestamps();
         });
     }
