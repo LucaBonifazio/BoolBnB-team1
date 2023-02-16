@@ -78,10 +78,9 @@
                     @endauth
                 </div>
             @endif
-            <div>
-                Proviamo a fixare il seeder
-            </div>
-
+            <h1>
+                Final Project
+            </h1>
         </div>
     </body>
 </html>

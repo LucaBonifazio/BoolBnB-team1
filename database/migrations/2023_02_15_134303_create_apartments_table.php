@@ -20,13 +20,12 @@ class CreateApartmentsTable extends Migration
             $table->unsignedTinyInteger('rooms');
             $table->unsignedTinyInteger('beds');
             $table->unsignedTinyInteger('bathrooms');
-            $table->unsignedMediumInteger('squeare_metres');
+            $table->unsignedMediumInteger('square_metres');
             $table->string('address', 250);
             $table->string('image', 500);
             $table->string('uploaded_image', 500)->nullable();
             $table->boolean('sponsored')->default(false);
             $table->boolean('visible')->default(true);
-
             $table->timestamps();
         });
     }
