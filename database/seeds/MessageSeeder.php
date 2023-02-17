@@ -10,7 +10,7 @@ class MessageSeeder extends Seeder
     {
 
         for ($i = 0; $i < 100; $i++) {
-            $message = Message::create([
+            $message = Message::create([ //TODO: capire cosa fare della variabile
                 'message' => $faker->text(100),
                 'date'    => $faker->dateTime(),
             ]);
