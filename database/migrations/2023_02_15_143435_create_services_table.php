@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateServicesTable extends Migration
 {
@@ -15,6 +16,65 @@ class CreateServicesTable extends Migration
             $table->string('slug', 50);
             $table->timestamps();
         });
+
+        DB::table('services')->insert([
+            [
+                'name' => 'WiFi',
+                'slug' => 'WiFi',
+            ],
+            [
+                'name' => 'Car Spot',
+                'slug' => 'Car Spot',
+            ],
+            [
+                'name' => 'Pool',
+                'slug' => 'Pool',
+            ],
+            [
+                'name' => 'Sauna',
+                'slug' => 'Sauna',
+            ],
+            [
+                'name' => 'Porter',
+                'slug' => 'Porter',
+            ],
+            [
+                'name' => 'Concierge',
+                'slug' => 'Concierge',
+            ],
+            [
+                'name' => 'Smoking',
+                'slug' => 'Smoking',
+            ],
+            [
+                'name' => 'Anlimales',
+                'slug' => 'Anlimales',
+            ],
+            [
+                'name' => 'Air Condtioning',
+                'slug' => 'Air Condtioning',
+            ],
+            [
+                'name' => 'Laundry Service',
+                'slug' => 'Laundry Service',
+            ],
+            [
+                'name' => 'Breakfast Service',
+                'slug' => 'Breakfast Service',
+            ],
+            [
+                'name' => 'Tv',
+                'slug' => 'Tv',
+            ],
+            [
+                'name' => 'Hair Dryer',
+                'slug' => 'Hair Dryer',
+            ],
+            [
+                'name' => 'Workspace',
+                'slug' => 'Workspace',
+            ],
+        ]);
     }
 
     public function down()
