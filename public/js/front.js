@@ -11391,23 +11391,10 @@ var render = function () {
                   1
                 ),
                 _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: { to: { name: "login" } },
-                      },
-                      [_vm._v("Login")]
-                    ),
-                  ],
-                  1
-                ),
+                _vm._m(1),
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _vm._m(2),
             ]
           ),
         ],
@@ -11436,6 +11423,21 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link",
+          attrs: { href: "http://localhost:8000/login" },
+        },
+        [_vm._v("Login")]
+      ),
+    ])
   },
   function () {
     var _vm = this

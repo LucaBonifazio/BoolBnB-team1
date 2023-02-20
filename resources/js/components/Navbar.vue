@@ -12,7 +12,7 @@
                             <router-link :to="{ name: 'apartments' }" class="nav-link">Apartments</router-link>
                         </li>
                         <li>
-                            <router-link :to="{ name: 'login'}" class="nav-link">Login</router-link>
+                            <a href="http://localhost:8000/login" class="nav-link">Login</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
