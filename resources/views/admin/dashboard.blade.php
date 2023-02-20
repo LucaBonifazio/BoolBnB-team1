@@ -18,6 +18,11 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-8">
+            <h2 class="mt-5">
+                Welcome, {{ $user->name }}!
+            </h2>
+        </div>
     </div>
 </div>
 @endsection
