@@ -26,9 +26,9 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function () {
         Route::get('/', 'PageController@dashboard')->name('dashboard');
-        // Route::resource('posts', 'PostController');
-        // Route::resource('categories', 'CategoryController');
-        // Route::resource('tags', 'TagController');
+        Route::resource('messages', 'MessageController');
+        Route::resource('services', 'ServiceController');
+        Route::resource('sponsorships', 'SponsorshipController');
 });
 
 Route::get('{any?}', function() {

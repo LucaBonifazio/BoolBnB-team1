@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ciaoo</h1>
+    <h1>Homepage from Vue</h1>
   </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

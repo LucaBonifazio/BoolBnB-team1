@@ -12,4 +12,3 @@
 </body>
 </html>
 
-{{-- {{ strreplace('', '-', app()->getLocale()) }} --}}
