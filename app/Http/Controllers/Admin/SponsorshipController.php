@@ -15,16 +15,16 @@ class SponsorshipController extends Controller
     }
 
 
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
 
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
 
     public function show(Sponsorship $sponsorship)
@@ -33,20 +33,20 @@ class SponsorshipController extends Controller
     }
 
 
-    public function edit(Sponsorship $sponsorship)
-    {
-        //
-    }
+    // public function edit(Sponsorship $sponsorship)
+    // {
+    //     //
+    // }
 
 
-    public function update(Request $request, Sponsorship $sponsorship)
-    {
-        //
-    }
+    // public function update(Request $request, Sponsorship $sponsorship)
+    // {
+    //     //
+    // }
 
 
-    public function destroy(Sponsorship $sponsorship)
-    {
-        //
-    }
+    // public function destroy(Sponsorship $sponsorship)
+    // {
+    //     //
+    // }
 }

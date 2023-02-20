@@ -15,16 +15,16 @@ class ViewController extends Controller
     }
 
 
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
 
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
 
     public function show(View $view)
@@ -33,20 +33,20 @@ class ViewController extends Controller
     }
 
 
-    public function edit(View $view)
-    {
-        //
-    }
+    // public function edit(View $view)
+    // {
+    //     //
+    // }
 
 
-    public function update(Request $request, View $view)
-    {
-        //
-    }
+    // public function update(Request $request, View $view)
+    // {
+    //     //
+    // }
 
 
-    public function destroy(View $view)
-    {
-        //
-    }
+    // public function destroy(View $view)
+    // {
+    //     //
+    // }
 }
