@@ -11358,7 +11358,10 @@ var render = function () {
         [
           _c(
             "router-link",
-            { staticClass: "navbar-brand", attrs: { to: { name: "home" } } },
+            {
+              staticClass: "navbar-brand",
+              attrs: { to: { name: "homepage" } },
+            },
             [_vm._v("BoolBnB")]
           ),
           _vm._v(" "),
@@ -11382,7 +11385,7 @@ var render = function () {
                         staticClass: "nav-link",
                         attrs: { to: { name: "apartments" } },
                       },
-                      [_vm._v("apartments")]
+                      [_vm._v("Apartments")]
                     ),
                   ],
                   1

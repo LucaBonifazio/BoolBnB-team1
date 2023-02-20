@@ -28,7 +28,7 @@ Route::middleware('auth')
         Route::get('/', 'PageController@dashboard')->name('dashboard');
         Route::resource('messages', 'MessageController');
         Route::resource('services', 'ServiceController');
-        Route::resource('views', 'ViewsController');
+        Route::resource('views', 'ViewController');
         Route::resource('sponsorships', 'SponsorshipController');
 });
 
