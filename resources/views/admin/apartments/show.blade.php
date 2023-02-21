@@ -18,11 +18,11 @@
                 <div class="card-text">Numero civico: {{ $apartment->apartment_number }}</div>
             </div>
         </div>
-    @endif
+    @else
     <div>
         <img class="d-flex m-auto" src="https://media.tenor.com/OTzJy4d4xGMAAAAC/computer-stick-man.gif" alt="gif">
     </div>
-
+    @endif
 
     <div class="controls mt-3">
         <a href="{{ route('admin.apartments.edit', ['apartment' => $apartment]) }}" class="btn btn-warning">Edit</a>
