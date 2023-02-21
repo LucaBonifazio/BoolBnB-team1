@@ -17,7 +17,6 @@ class CreateMessagesTable extends Migration
             $table->id();
             $table->text('message');
             $table->dateTime('date');
-            //$table->foreignId('apartement_id')->constrained();
             $table->timestamps();
         });
     }

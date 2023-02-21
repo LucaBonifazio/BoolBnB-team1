@@ -25,11 +25,39 @@ class CreateUsersTable extends Migration
 
         DB::table('users')->insert([
             [
-                'name' => 'User',
-                'surname' => 'SUser',
+                'name' => 'Luca',
+                'surname' => 'Booleaner',
                 'birthdate' => '2001-01-01',
-                'email' => 'user@gmail.com',
-                'password' => Hash::make('user'),
+                'email' => 'luca@gmail.com',
+                'password' => Hash::make('luca'),
+            ],
+            [
+                'name' => 'Andrea',
+                'surname' => 'Booleaner',
+                'birthdate' => '2001-01-01',
+                'email' => 'andrea@gmail.com',
+                'password' => Hash::make('andrea'),
+            ],
+            [
+                'name' => 'Nicola',
+                'surname' => 'Booleaner',
+                'birthdate' => '2001-01-01',
+                'email' => 'nicola@gmail.com',
+                'password' => Hash::make('nicola'),
+            ],
+            [
+                'name' => 'Giulio',
+                'surname' => 'Booleaner',
+                'birthdate' => '2001-01-01',
+                'email' => 'giulio@gmail.com',
+                'password' => Hash::make('giulio'),
+            ],
+            [
+                'name' => 'Simone',
+                'surname' => 'Booleaner',
+                'birthdate' => '2001-01-01',
+                'email' => 'simone@gmail.com',
+                'password' => Hash::make('simone'),
             ],
 
         ]);

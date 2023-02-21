@@ -1,6 +1,7 @@
 <?php
 
 use App\Apartment;
+use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 
@@ -8,10 +9,13 @@ class ApartmentSeeder extends Seeder
 {
     public function run(Faker $faker)
     {
+        $user = User::all('id')->all();
+
         for ($i = 0 ; $i < 50 ; $i++) {
             $title = $faker->words(rand(3, 7), true);
 
             $apartment = Apartment::create([
+                'user_id'            => $faker->randomElement($user)->id,
                 'slug'               => Apartment::getSlug($title),
                 'title'              => $title,
                 'n_rooms'            => $faker->numberBetween(0, 10),
