@@ -18,8 +18,8 @@ class ApartmentController extends Controller
             'max:100',
         ],
         'n_rooms'           => 'integer|required',
-        'n_beds'            => 'integer|required', 
-        'n_bathrooms'       => 'integer|required', 
+        'n_beds'            => 'integer|required',
+        'n_bathrooms'       => 'integer|required',
         'square_metres'     => 'integer|required',
         'picture'           => 'url|max:500',
         'uploaded_image'    => 'nullable|image|max:500',
@@ -77,7 +77,7 @@ class ApartmentController extends Controller
 
     public function show(Apartment $apartment)
     {
-        return view('admin.aparments.show', compact('apartment'));
+        return view('admin.apartments.show', compact('apartment'));
     }
 
 

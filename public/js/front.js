@@ -5116,6 +5116,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -5205,6 +5208,10 @@ var routes = [{
   path: '/apartments',
   name: 'apartments',
   component: _pages_ApartmentPage__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: "/apartments/advanced-search",
+  name: "advanced-search",
+  component: AdvancedSearchPage
 }];
 
 // personalizzazione del vue-router

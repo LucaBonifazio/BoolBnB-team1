@@ -19,6 +19,11 @@ const routes = [
         name: 'apartments',
         component: ApartmentPage,
     },
+    {
+        path: "/apartments/advanced-search",
+        name: "advanced-search",
+        component: AdvancedSearchPage,
+    },
 ];
 
 // personalizzazione del vue-router
