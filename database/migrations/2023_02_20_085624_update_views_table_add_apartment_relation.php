@@ -19,7 +19,7 @@ class UpdateViewsTableAddApartmentRelation extends Migration
 
             $table->foreign('apartment_id')
                 ->references('id')
-                ->on('views')
+                ->on('apartments')
                 ->onDelete('set null');
         });
     }

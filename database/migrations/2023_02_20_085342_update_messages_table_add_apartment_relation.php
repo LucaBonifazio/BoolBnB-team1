@@ -19,7 +19,7 @@ class UpdateMessagesTableAddApartmentRelation extends Migration
 
             $table->foreign('apartment_id')
                 ->references('id')
-                ->on('messages')
+                ->on('apartments')
                 ->onDelete('set null');
         });
     }

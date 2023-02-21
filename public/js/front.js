@@ -5206,6 +5206,8 @@ var routes = [{
   name: 'apartments',
   component: _pages_ApartmentPage__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
+
+// personalizzazione del vue-router
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
   mode: 'history',
   routes: routes
@@ -11533,7 +11535,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass: "nav-link",
-          attrs: { href: "http://localhost:8000/admin" },
+          attrs: { href: "http://localhost:8000/login" },
         },
         [_vm._v("Login")]
       ),

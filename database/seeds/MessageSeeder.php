@@ -13,10 +13,11 @@ class MessageSeeder extends Seeder
 
         for ($i = 0; $i < 100; $i++) {
             $message = Message::create([
-                //'apartment_id' => $faker->randomElement($apartment)->id,
+                'apartment_id' => $faker->randomElement($apartment)->id,
                 'message' => $faker->text(100),
                 'date'    => $faker->dateTime(),
             ]);
         }
     }
 }
+

@@ -14,7 +14,7 @@ class ViewSeeder extends Seeder
 
         for($i = 0 ; $i < 100 ; $i++) {
             $view = View::create([
-                //'apartment_id' => $faker->randomElement($apartment)->id,
+                'apartment_id' => $faker->randomElement($apartment)->id,
                 'IP'   => $faker->localIpv4(),
                 'date' => $faker->dateTime(),
             ]);
