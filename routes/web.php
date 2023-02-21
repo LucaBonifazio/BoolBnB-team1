@@ -26,6 +26,7 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function () {
         Route::get('/', 'PageController@dashboard')->name('dashboard');
+        Route::resource('apartments', 'ApartmentController');
         Route::resource('messages', 'MessageController');
         Route::resource('services', 'ServiceController');
         Route::resource('views', 'ViewController');
