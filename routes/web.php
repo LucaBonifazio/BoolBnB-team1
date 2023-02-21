@@ -33,6 +33,10 @@ Route::middleware('auth')
         Route::resource('sponsorships', 'SponsorshipController');
 });
 
+// Route::get('/login', function () {
+//     return view('auth.login');
+// })->name('login');
+
 Route::get('{any?}', function() {
     return view('guest.homepage');
 })->where("any", ".*")->name('homepage');

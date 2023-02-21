@@ -31,6 +31,6 @@
     {{ $apartments->links() }}
 
     <div>
-        <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Torna alla dashboard</a>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Back to dashboard</a>
     </div>
 @endsection

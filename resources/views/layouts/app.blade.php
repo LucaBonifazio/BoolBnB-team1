@@ -35,12 +35,12 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Appartamenti
+                                Apartments
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="{{ route('admin.apartments.index') }}">Mostra tutto</a>
-                                <a class="nav-link" href="{{ route('admin.apartments.create') }}">Crea</a>
+                                <a class="nav-link" href="{{ route('admin.apartments.index') }}">Show All</a>
+                                <a class="nav-link" href="{{ route('admin.apartments.create') }}">Create</a>
                             </div>
                         </li>
                     </ul>
