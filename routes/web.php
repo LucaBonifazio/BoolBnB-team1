@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,9 +34,16 @@ Route::middleware('auth')
         Route::resource('sponsorships', 'SponsorshipController');
 });
 
-// Route::get('/login', function () {
-//     return view('auth.login');
-// })->name('login');
+// if () {
+//     Route::get('/login', function () {
+//         return view('auth.login');
+//     })->name('login');
+// } else {
+//     Route::get('/admin', function () {
+//         return view('admin.dashboard');
+//     })->name('dashboard');
+// }
+
 
 Route::get('{any?}', function() {
     return view('guest.homepage');
