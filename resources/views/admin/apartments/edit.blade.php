@@ -11,11 +11,12 @@
         </div>
     @endif
 
-    <form method="post" action="{{ route('admin.apartments.store') }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('admin.apartments.update', ['apartment' => $apartment]) }}" enctype="multipart/form-data">
+        @method('PUT')
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') }}">
+            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title', $apartment->title) }}">
             @error('title')
                 <div class="invalid-feedback">
                     <ul>
@@ -29,7 +30,7 @@
 
         <div class="mb-3">
             <label for="slug" class="form-label">Slug</label>
-            <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"  value="{{ old('slug') }}">
+            <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"  value="{{ old('slug', $apartment->slug) }}">
             @error('slug')
                 <div class="invalid-feedback">
                     <ul>
@@ -43,7 +44,7 @@
 
         <div class="mb-3">
             <label for="picture" class="form-label">Picture</label>
-            <input type="url" class="form-control @error('picture') is-invalid @enderror" id="picture" name="picture" value="{{ old('picture') }}">
+            <input type="url" class="form-control @error('picture') is-invalid @enderror" id="picture" name="picture" value="{{ old('picture', $apartment->picture) }}">
             @error('picture')
                 <div class="invalid-feedback">
                     <ul>
@@ -55,6 +56,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Create</button>
+
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 @endsection

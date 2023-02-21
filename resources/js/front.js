@@ -5,6 +5,7 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 import PageHome from './pages/PageHome';
 import ApartmentPage from './pages/ApartmentPage';
+import AdvancedSearchPage from './pages/AdvancedSearchPage';
 
 Vue.use(VueRouter);
 
@@ -20,7 +21,7 @@ const routes = [
         component: ApartmentPage,
     },
     {
-        path: "/apartments/advanced-search",
+        path: "/advanced-search",
         name: "advanced-search",
         component: AdvancedSearchPage,
     },

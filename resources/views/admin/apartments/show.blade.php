@@ -27,6 +27,6 @@
     <div class="controls mt-3">
         <a href="{{ route('admin.apartments.edit', ['apartment' => $apartment]) }}" class="btn btn-warning">Edit</a>
         <button class="btn btn-danger btn_delete" data-id="{{ $apartment->slug}}">Delete</button>
-        {{-- <a href="{{ route('guest.homepage') }}" class="btn btn-primary" data-id="{{ $apartment->slug}}">Torna alla Homepage</a> --}}
+        <a href="{{ route('admin.apartments.index', ['apartment' => $apartment]) }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Torna alla pagina predecente</a>
     </div>
 @endsection

@@ -29,4 +29,8 @@
     </table>
 
     {{ $apartments->links() }}
+
+    <div>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Torna alla dashboard</a>
+    </div>
 @endsection
