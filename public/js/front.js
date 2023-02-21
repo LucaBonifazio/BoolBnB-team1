@@ -11533,7 +11533,7 @@ var staticRenderFns = [
         "a",
         {
           staticClass: "nav-link",
-          attrs: { href: "http://localhost:8000/login" },
+          attrs: { href: "http://localhost:8000/admin" },
         },
         [_vm._v("Login")]
       ),
