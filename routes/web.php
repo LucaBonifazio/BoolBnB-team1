@@ -34,15 +34,7 @@ Route::middleware('auth')
         Route::resource('sponsorships', 'SponsorshipController');
 });
 
-// if () {
-//     Route::get('/login', function () {
-//         return view('auth.login');
-//     })->name('login');
-// } else {
-//     Route::get('/admin', function () {
-//         return view('admin.dashboard');
-//     })->name('dashboard');
-// }
+
 
 
 Route::get('{any?}', function() {
