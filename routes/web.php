@@ -34,9 +34,6 @@ Route::middleware('auth')
         Route::resource('sponsorships', 'SponsorshipController');
 });
 
-
-
-
 Route::get('{any?}', function() {
     return view('guest.homepage');
 })->where("any", ".*")->name('homepage');

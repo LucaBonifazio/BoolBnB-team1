@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::get('/apartments', 'Api\ApartmentController@index')->name('apartment.index');
+Route::get('/apartments/random', 'Api\ApartmentController@random')->name('apartments.random');
+Route::get('/apartments/{apartment}', 'Api\ApartmentController@show')->name('apartment.show');

@@ -38,7 +38,7 @@ class ApartmentController extends Controller
     }
 
     public function random() {
-        $apartments = apartment::inRandomOrder()->limit(9)->get();
+        $apartments = Apartment::inRandomOrder()->limit(9)->get();
 
         return response()->json([
             'success' => true,

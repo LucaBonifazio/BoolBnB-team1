@@ -39,7 +39,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="{{ route('admin.apartments.index') }}">Show All</a>
+                                <a class="nav-link" href="{{ route('admin.apartments.index') }}">Show all</a>
                                 <a class="nav-link" href="{{ route('admin.apartments.create') }}">Create</a>
                             </div>
                         </li>
@@ -49,8 +49,7 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Messages</a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="{{ route('admin.messages.index') }}">Show All</a>
-                                <a class="nav-link" href="{{ route('admin.messages.create') }}">Create</a>
+                                <a class="nav-link" href="{{ route('admin.messages.index') }}">Show all messages</a>
                             </div>
                         </li>
                     </ul>
@@ -59,7 +58,7 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Views</a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="nav-link" href="{{ route('admin.views.index') }}">Show All</a>
+                                <a class="nav-link" href="{{ route('admin.views.index') }}">Show all views</a>
                             </div>
                         </li>
                     </ul>
