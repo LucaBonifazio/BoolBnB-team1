@@ -6,8 +6,8 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">ID appartamento</th>
-                <th scope="col">IP visualizzazioni</th>
+                <th scope="col">ID apartment</th>
+                <th scope="col">IP address</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
