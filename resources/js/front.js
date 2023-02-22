@@ -21,9 +21,10 @@ const routes = [
         component: ApartmentsPage,
     },
     {
-        path: '/apartment',
+        path: '/apartments/:slug',
         name: 'apartment',
         component: ApartmentPage,
+        props: true,
     },
 ];
 

@@ -1,15 +1,83 @@
 <template>
-    <div>
-      <h1>Apartments from Vue</h1>
-    </div>
-  </template>
+    <section class="container">
+        <h1>Apartments</h1>
+        <div class="row g-3" v-if="results">
+            <div
+                v-for="apartment in results.data"
+                :key="apartment.id"
+                class="col-sm-6 col-md-4"
+            >
+                <div class="card h-100">
+                    <img
+                        :src="apartment.picture"
+                        class="card-img-top"
+                        :alt="apartment.title"
+                    />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ apartment.title }}</h5>
+                        <!-- <p class="card-text flex-grow-1">{{ apartment.excerpt }}</p> -->
+                        <router-link :to="{ name: 'apartment', params: {slug: apartment.slug}}" class="btn btn-primary">Details</router-link>
+                    </div>
+                </div>
+            </div>
+<nav class="mt-3">
+                <ul class="pagination">
+                    <li
+                        class="page-item"
+                        :class="{disabled: results.current_page == 1}"
+                        @click="changePage(results.current_page - 1)"
+                    >
+                        <span class="page-link">Previous</span>
+                    </li>
+                    <li
+                        v-for="page in results.last_page"
+                        :key="page"
+                        class="page-item"
+                        :class="{active: results.current_page == page}"
+                        @click="changePage(page)"
+                    >
+                        <span class="page-link" href="">{{ page }}</span>
+                    </li>
+                    <li
+                        class="page-item"
+                        :class="{disabled: results.current_page == results.last_page}"
+                        @click="changePage(results.current_page + 1)"
+                    >
+                        <span class="page-link">Next</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div v-else>
+            <img class="d-flex m-auto" src="https://media.tenor.com/OTzJy4d4xGMAAAAC/computer-stick-man.gif" alt="gif">
+        </div>
+    </section>
+</template>
 
-  <script>
-  export default {
+<script>
 
-  }
-  </script>
+export default {
+    data() {
+        return {
+            results: null,
+        };
+    },
+    methods: {
+        changePage(page) {
+        axios.get('/api/apartments?page=' + page)
+                .then(response => this.results = response.data.results);
+        }
+    },
+    created() {
+        this.changePage(1);
+    },
+};
+</script>
 
-  <style lang="scss" scoped>
+<style lang="scss" scoped>
 
-  </style>
+    .pagination{
+        cursor: pointer,
+    };
+
+</style>

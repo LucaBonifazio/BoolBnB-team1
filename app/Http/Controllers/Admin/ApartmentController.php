@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use App\Apartment;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -37,6 +38,8 @@ class ApartmentController extends Controller
 
     public function index()
     {
+        //$users = User::all();
+        //$apartments = Apartment::where('user_id', $users->id)->paginate();
         $apartments = Apartment::paginate();
         return view('admin.apartments.index', compact('apartments'));
     }
