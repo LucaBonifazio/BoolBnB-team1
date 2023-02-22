@@ -5285,6 +5285,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5297,7 +5299,6 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/api/apartments/random').then(function (response) {
       return _this.arrRandom = response.data.results;
     });
-    console.log(this.arrRandom);
   }
 });
 
@@ -12097,8 +12098,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function () {}
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "p-1" }, [
+    _c("h1", [_vm._v("Welcome on BoolBnB")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "grid h-100" },
+      _vm._l(_vm.arrRandom, function (apartment) {
+        return _c(
+          "div",
+          { key: apartment.id, staticClass: "tile" },
+          [
+            _c(
+              "router-link",
+              {
+                attrs: {
+                  to: { name: "apartment", params: { slug: apartment.slug } },
+                },
+              },
+              [
+                _c("img", {
+                  attrs: { src: apartment.picture, alt: apartment.title },
+                }),
+              ]
+            ),
+          ],
+          1
+        )
+      }),
+      0
+    ),
+  ])
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
