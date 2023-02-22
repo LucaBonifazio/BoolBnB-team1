@@ -4,8 +4,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import PageHome from './pages/PageHome';
+import ApartmentsPage from './pages/ApartmentsPage';
 import ApartmentPage from './pages/ApartmentPage';
-import AdvancedSearchPage from './pages/AdvancedSearchPage';
 
 Vue.use(VueRouter);
 
@@ -18,12 +18,12 @@ const routes = [
     {
         path: '/apartments',
         name: 'apartments',
-        component: ApartmentPage,
+        component: ApartmentsPage,
     },
     {
-        path: "/advanced-search",
-        name: "advanced-search",
-        component: AdvancedSearchPage,
+        path: '/apartment',
+        name: 'apartment',
+        component: ApartmentPage,
     },
 ];
 
