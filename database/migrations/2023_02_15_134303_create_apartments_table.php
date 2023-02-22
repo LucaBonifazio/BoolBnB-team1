@@ -19,9 +19,9 @@ class CreateApartmentsTable extends Migration
             $table->unsignedMediumInteger('square_meters');
             $table->string('picture', 1000)->default("https://www.creativefabrica.com/wp-content/uploads/2020/01/23/house-icon-Graphics-1-2.jpg");
             $table->string('uploaded_image', 1000)->nullable();
-            $table->boolean('visibility')->default(true);
-            $table->float('latitude')->nullable();
-            $table->float('longitude')->nullable();
+            $table->boolean('visibility')->default(false);
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
             $table->string('state', 100);
             $table->string('city', 200);
             $table->string('address', 250);
