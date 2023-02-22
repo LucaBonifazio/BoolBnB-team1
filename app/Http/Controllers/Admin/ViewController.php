@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\View;
+use App\Apartment;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ViewController extends Controller
 {
 
     public function index()
     {
-        //
+        $views = View::paginate();
+        $apartments = Apartment::all();
+        return view('admin.views.index',[
+            'views' => $views,
+            'apartments' => $apartments
+        ]);
     }
 
 
