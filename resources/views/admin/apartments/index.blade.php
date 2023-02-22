@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>{{ Auth::user()->name }} apartments</h1>
+    <h1>{{ Auth::user()->name }}'s apartments</h1>
 
     <table class="table table-striped">
         <thead>

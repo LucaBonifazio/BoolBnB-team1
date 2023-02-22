@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Index page views</h1>
+<h1>{{ Auth::user()->name }}'s views</h1>
 
     <table class="table table-striped">
         <thead>
