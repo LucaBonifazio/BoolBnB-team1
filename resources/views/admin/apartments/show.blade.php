@@ -9,7 +9,7 @@
                 <div class="card-text">Rooms: {{ $apartment->n_rooms }}</div>
                 <div class="card-text">Beds: {{ $apartment->n_beds }}</div>
                 <div class="card-text">Bathrooms: {{ $apartment->n_bathrooms }}</div>
-                <div class="card-text">Mq: {{ $apartment->square_metres }}</div>
+                <div class="card-text">Mq: {{ $apartment->square_meters }}</div>
                 <div class="card-text">Latitude: {{ $apartment->latitude }}</div>
                 <div class="card-text">Longitude: {{ $apartment->longitude }}</div>
                 <div class="card-text">State: {{ $apartment->state }}</div>
