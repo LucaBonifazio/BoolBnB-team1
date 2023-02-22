@@ -2,9 +2,11 @@
 
 @section('content')
     @if ($apartment)
-        <div class="card text-bg-dark w-75 m-auto">
-            <img src="{{ $apartment->picture }}" class="card-img" alt="{{ $apartment->title }}">
-            <div class="card-img-overlay">
+    <div class="row">
+            <div class="col">
+                <img src="{{ $apartment->picture }}" class="card-img" alt="{{ $apartment->title }}">
+            </div>
+            <div class="col">
                 <h5 class="card-title">Apartment name: {{ $apartment->title }}</h5>
                 <div class="card-text">Rooms: {{ $apartment->n_rooms }}</div>
                 <div class="card-text">Beds: {{ $apartment->n_beds }}</div>
@@ -17,12 +19,12 @@
                 <div class="card-text">Address: {{ $apartment->address }}</div>
                 <div class="card-text">Apartment number: {{ $apartment->apartment_number }}</div>
             </div>
-        </div>
-    @else
-    <div>
-        <img class="d-flex m-auto" src="https://media.tenor.com/OTzJy4d4xGMAAAAC/computer-stick-man.gif" alt="gif">
+        @else
+            <div>
+                <img class="d-flex m-auto" src="https://media.tenor.com/OTzJy4d4xGMAAAAC/computer-stick-man.gif" alt="gif">
+            </div>
+            @endif
     </div>
-    @endif
 
     <div class="controls mt-3">
         <a href="{{ route('admin.apartments.edit', ['apartment' => $apartment]) }}" class="btn btn-warning">Edit</a>
