@@ -27,11 +27,11 @@ class PageController extends Controller
         $view = View::all();
 
         return view('admin.dashboard', [
-            'user' => $user,
-            'apartment' => $apartment,
-            'message' => $message,
-            'service' => $service,
-            'sponsorship' => $sponsorship,
+            'user'          => $user,
+            'apartment'     => $apartment,
+            'message'       => $message,
+            'service'       => $service,
+            'sponsorship'   => $sponsorship,
             'view' => $view,
         ]);
     }

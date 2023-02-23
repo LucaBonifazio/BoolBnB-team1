@@ -19,9 +19,9 @@ class ViewController extends Controller
         $users = User::all();
 
         return view('admin.views.index',[
-            'views' => $views,
-            'apartments' => $apartments,
-            'users' => $users,
+            'views'         => $views,
+            'apartments'    => $apartments,
+            'users'         => $users,
         ]);
     }
 

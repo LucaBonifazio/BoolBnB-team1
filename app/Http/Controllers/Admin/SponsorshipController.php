@@ -16,8 +16,8 @@ class SponsorshipController extends Controller
         $apartments = Apartment::all();
 
         return view('admin.sponsorships.index', [
-            'sponsorships' => $sponsorships,
-            'apartments' => $apartments
+            'sponsorships'  => $sponsorships,
+            'apartments'    => $apartments
         ]);
     }
 
