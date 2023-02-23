@@ -14,6 +14,7 @@ class SponsorshipController extends Controller
     {
         $sponsorships = Sponsorship::paginate();
         $apartments = Apartment::all();
+
         return view('admin.sponsorships.index', [
             'sponsorships' => $sponsorships,
             'apartments' => $apartments

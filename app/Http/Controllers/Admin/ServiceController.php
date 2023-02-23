@@ -8,14 +8,6 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    // private $validation = [
-    //     'name'         => 'string|required|max:50',
-    //     'slug'          => [
-    //         'required',
-    //         'string',
-    //         'max:50',
-    //     ],
-    // ];
 
     public function index()
     {

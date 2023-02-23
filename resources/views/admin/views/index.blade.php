@@ -17,7 +17,7 @@
                     <th scope="row">{{ $view->apartment_id }}</th>
                     <td>{{ $view->IP }}</td>
                     <td>
-                        <a href="{{ route('admin.apartments.show', ['apartment' => $view->apartment ]) }}" class="btn btn-primary">Show</a>
+                        <a href="{{ route('admin.views.show', ['view' => $view ]) }}" class="btn btn-primary">Show</a>
                     </td>
                 </tr>
             @endforeach
@@ -27,6 +27,6 @@
     {{ $views->links() }}
 
     <div>
-        <a href="{{ route('admin.apartments.index') }}" class="btn btn-info">Back to apartment</a>
+        <a href="{{ route('admin.views.index') }}" class="btn btn-info">Back to apartment</a>
     </div>
 @endsection

@@ -14,6 +14,7 @@ class ViewController extends Controller
     {
         $views = View::paginate();
         $apartments = Apartment::all();
+
         return view('admin.views.index',[
             'views' => $views,
             'apartments' => $apartments
@@ -35,7 +36,7 @@ class ViewController extends Controller
 
     public function show(View $view)
     {
-        //
+        return view('admin.views.show', compact('view'));
     }
 
 
