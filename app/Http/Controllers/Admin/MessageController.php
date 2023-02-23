@@ -6,6 +6,7 @@ use App\Message;
 use App\Apartment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
@@ -16,7 +17,7 @@ class MessageController extends Controller
 
     public function index()
     {
-        $messages = Message::paginate();
+        $messages = Message::where('apartment_id', Auth::id())->paginate();
         $apartments = Apartment::all();
 
         return view('admin.messages.index', [
