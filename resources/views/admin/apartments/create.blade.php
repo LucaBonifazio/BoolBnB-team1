@@ -42,7 +42,7 @@
             @enderror
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="picture" class="form-label">Pictures</label>
             <input type="url" class="form-control @error('picture') is-invalid @enderror" id="picture" name="picture" value="{{ old('picture') }}">
             @error('picture')
@@ -54,7 +54,7 @@
                     </ul>
                 </div>
             @enderror
-        </div>
+        </div> --}}
 
         <div class="mb-3">
             <label for="uploaded_image" class="form-label">Uploaded Image</label>

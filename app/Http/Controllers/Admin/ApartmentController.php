@@ -75,7 +75,7 @@ class ApartmentController extends Controller
         $apartment->n_beds           =    $data['n_beds'];
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
-        $apartment->picture          =    $data['picture'];
+        //$apartment->picture          =    $data['picture'];
         $apartment->uploaded_image   =    $img_path;
         $apartment->visibility = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
         $apartment->latitude = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
@@ -112,14 +112,13 @@ class ApartmentController extends Controller
         $data = $request->all();
         $img_path = Storage::put('uploads', $data['uploaded_image']);
 
-        $apartment = new Apartment;
         $apartment->title            =    $data['title'];
         $apartment->slug             =    $data['slug'];
         $apartment->n_rooms          =    $data['n_rooms'];
         $apartment->n_beds           =    $data['n_beds'];
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
-        $apartment->picture          =    $data['picture'];
+        //$apartment->picture          =    $data['picture'];
         $apartment->uploaded_image   =    $img_path;
         $apartment->visibility = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
         $apartment->latitude = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;

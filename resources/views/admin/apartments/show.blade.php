@@ -5,7 +5,7 @@
     <div class="row">
         @if ($apartment->uploaded_image)
             <div class="col">
-                <img src="{{ asset('storage/' . $apartment->uploaded_image) }}" alt="" class="card-img">
+                <img src="{{ asset('storage/' . $apartment->uploaded_image) }}" alt="{{ $apartment->title }}" class="card-img">
             </div>
         @else
             <div class="col">
