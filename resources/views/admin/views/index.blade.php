@@ -15,8 +15,8 @@
         <tbody>
             @foreach ($views as $view)
                 <tr>
-                    <th scope="row">{{ $view->apartment->user_id }}</th>
-                    <th>{{ $view->apartment_id }}</th>
+                    <th scope="row">{{ $view->apartment_id }}</th>
+                    <th>{{ $view->apartment->user_id }}</th>
                     <td>{{ $view->IP }}</td>
                     <td>
                         <a href="{{ route('admin.views.show', ['view' => $view ]) }}" class="btn btn-primary">Show</a>

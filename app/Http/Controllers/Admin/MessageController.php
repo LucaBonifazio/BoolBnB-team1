@@ -41,7 +41,7 @@ class MessageController extends Controller
         $data = $request->all();
 
         $message = new Message;
-        $message->message            =    $data['message'];
+        $message->message          =    $data['message'];
         $message->date             =    $data['date'];
         $message->save();
 
