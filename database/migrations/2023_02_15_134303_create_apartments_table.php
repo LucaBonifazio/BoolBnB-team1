@@ -18,7 +18,7 @@ class CreateApartmentsTable extends Migration
             $table->unsignedTinyInteger('n_bathrooms');
             $table->unsignedMediumInteger('square_meters');
             $table->string('picture')->default("https://www.creativefabrica.com/wp-content/uploads/2020/01/23/house-icon-Graphics-1-2.jpg");
-            $table->string('uploaded_image', 1000)->nullable();
+            $table->string('uploaded_image')->nullable();
             $table->boolean('visibility')->default(false);
             $table->decimal('latitude', 10, 7)->nullable();
             $table->decimal('longitude', 10, 7)->nullable();

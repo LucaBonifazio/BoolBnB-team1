@@ -26,7 +26,7 @@ class ApartmentController extends Controller
         'n_beds'            => 'integer|required',
         'n_bathrooms'       => 'integer|required',
         'square_meters'     => 'integer|required',
-        'picture'           => 'url|image',
+        'picture'           => 'url',
         'uploaded_image'    => 'nullable|image',
         'visibility'        => 'boolean',
         'latitude'          => 'required|between:-90,90',
