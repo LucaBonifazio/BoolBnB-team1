@@ -8,10 +8,19 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+    // private $validation = [
+    //     'name'         => 'string|required|max:50',
+    //     'slug'          => [
+    //         'required',
+    //         'string',
+    //         'max:50',
+    //     ],
+    // ];
 
     public function index()
     {
-        //
+        $services = Service::paginate();
+        return view('admin.services.index', compact('services'));
     }
 
 
@@ -29,7 +38,7 @@ class ServiceController extends Controller
 
     public function show(Service $service)
     {
-        //
+        return view('admin.services.show', compact('service'));
     }
 
 
