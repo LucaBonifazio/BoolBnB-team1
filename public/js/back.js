@@ -10535,14 +10535,29 @@ var __webpack_exports__ = {};
   !*** ./resources/js/back.js ***!
   \******************************/
 __webpack_require__(/*! ./common */ "./resources/js/common.js");
+var eleOverlay = document.querySelector('.overlay');
+if (eleOverlay) {
+  var btnsDelete = document.querySelectorAll('.btn_delete');
+  btnsDelete.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      eleOverlay.classList.remove('d-none');
+      baseUrl = 'http://localhost:8000/admin/';
+      if (eleOverlay.querySelector('form').classList.contains('apartment')) {
+        baseUrl += 'apartments/';
+        // } else if (eleOverlay.querySelector('form').classList.contains('category')) {
+        //     baseUrl += 'categories/';
+        // } else if (eleOverlay.querySelector('form').classList.contains('tag')) {
+        //     baseUrl += 'tags/';
+      }
 
-// window.Vue = require('vue');
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-// const app = new Vue({
-//     el: '#app',
-// });
+      eleOverlay.querySelector('form').setAttribute('action', baseUrl + this.dataset.id);
+    });
+  });
+  var eleBtnClose = eleOverlay.querySelector('.btn_close');
+  eleBtnClose.addEventListener('click', function () {
+    eleOverlay.classList.add('d-none');
+  });
+}
 })();
 
 /******/ })()

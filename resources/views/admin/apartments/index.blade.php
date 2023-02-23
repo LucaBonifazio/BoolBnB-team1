@@ -32,4 +32,8 @@
     <div>
         <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Back to dashboard</a>
     </div>
+
+    @include('admin.partials.delete_confirmation', [
+        'delete_name' => 'apartment',
+    ])
 @endsection
