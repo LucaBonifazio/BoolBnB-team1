@@ -31,4 +31,8 @@
         <button class="btn btn-danger btn_delete" data-id="{{ $apartment->slug}}">Delete</button>
         <a href="{{ route('admin.apartments.index', ['apartment' => $apartment]) }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Turn back</a>
     </div>
+
+    @include('admin.partials.delete_confirmation', [
+        'delete_name' => 'apartment',
+    ])
 @endsection

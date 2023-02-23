@@ -35,14 +35,4 @@ class PageController extends Controller
             'view' => $view,
         ]);
     }
-    // public function homepage()
-    // {
-    //     $user = Auth::user();
-    //     $apartment = Apartment::paginate();
-
-    //     return view('guest.homepage', [
-    //         'user' => $user,
-    //         'apartment' => $apartment,
-    //     ]);
-    // }
 }

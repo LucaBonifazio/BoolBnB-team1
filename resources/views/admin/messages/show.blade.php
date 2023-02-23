@@ -21,4 +21,8 @@
         <button class="btn btn-danger btn_delete" data-id="{{ $message->slug}}">Delete</button>
             <a href="{{ route('admin.messages.index', ['message' => $message]) }}" class="btn btn-info" data-id="{{ $message->slug}}">Turn back</a>
     </div>
+
+    @include('admin.partials.delete_confirmation', [
+        'delete_name' => 'message',
+    ])
 @endsection
