@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use App\Service;
 use App\Apartment;
+use App\Sponsorship;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
-use App\Sponsorship;
+use Illuminate\Support\Facades\Auth;
 
 class ApartmentController extends Controller
 {
@@ -40,9 +41,7 @@ class ApartmentController extends Controller
 
     public function index()
     {
-        //$users = User::all();
-        //$apartments = Apartment::where('user_id', $users->id)->paginate();
-        $apartments = Apartment::paginate();
+        $apartments = Apartment::where('user_id', Auth::id())->paginate();
         $services = Service::all();
         $sponsorships = Sponsorship::all();
         return view('admin.apartments.index', [
