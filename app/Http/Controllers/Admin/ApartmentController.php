@@ -66,6 +66,7 @@ class ApartmentController extends Controller
         $data = $request->all();
 
         $apartment = new Apartment;
+        $apartment->user_id          =    auth()->user()->id;
         $apartment->title            =    $data['title'];
         $apartment->slug             =    $data['slug'];
         $apartment->n_rooms          =    $data['n_rooms'];

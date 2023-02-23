@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use App\View;
 use App\Apartment;
 use Illuminate\Http\Request;
@@ -15,10 +16,12 @@ class ViewController extends Controller
     {
         $views = View::where('apartment_id', Auth::id())->paginate();
         $apartments = Apartment::all();
+        $users = User::all();
 
         return view('admin.views.index',[
             'views' => $views,
-            'apartments' => $apartments
+            'apartments' => $apartments,
+            'users' => $users,
         ]);
     }
 

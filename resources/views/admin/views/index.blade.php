@@ -6,6 +6,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th scope="col">ID user</th>
                 <th scope="col">ID apartment</th>
                 <th scope="col">IP address</th>
                 <th scope="col">Action</th>
@@ -14,7 +15,8 @@
         <tbody>
             @foreach ($views as $view)
                 <tr>
-                    <th scope="row">{{ $view->apartment_id }}</th>
+                    <th scope="row">{{ $view->apartment->user_id }}</th>
+                    <th>{{ $view->apartment_id }}</th>
                     <td>{{ $view->IP }}</td>
                     <td>
                         <a href="{{ route('admin.views.show', ['view' => $view ]) }}" class="btn btn-primary">Show</a>
