@@ -23,7 +23,7 @@ class ApartmentSeeder extends Seeder
                 'n_bathrooms'        => $faker->numberBetween(1, 10),
                 'square_meters'      => $faker->numberBetween(50, 100),
                 'picture'            => 'https://picsum.photos/id/' . rand(0, 1000) . '/500/400',
-                // 'uploaded_image'     => $faker->,
+                //'uploaded_image'     => $faker->,
                 'visibility'         => $faker->numberBetween(0, 1),
                 'latitude'           => $faker->latitude($min = -90, $max = 90),
                 'longitude'          => $faker->longitude($min = -180, $max = 180),

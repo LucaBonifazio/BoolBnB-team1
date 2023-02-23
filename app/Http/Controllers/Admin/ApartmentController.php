@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ApartmentController extends Controller
 {
@@ -64,6 +65,7 @@ class ApartmentController extends Controller
         $request->validate($this->validation);
 
         $data = $request->all();
+        $img_path = Storage::put('uploads', $data['uploaded_image']);
 
         $apartment = new Apartment;
         $apartment->user_id          =    auth()->user()->id;
@@ -74,7 +76,7 @@ class ApartmentController extends Controller
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
         $apartment->picture          =    $data['picture'];
-        //$apartment->uploaded_image   =    $data['uploaded_image'];
+        $apartment->uploaded_image   =    $img_path;
         $apartment->visibility = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
         $apartment->latitude = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
         $apartment->longitude = isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
@@ -108,6 +110,7 @@ class ApartmentController extends Controller
         $request->validate($this->validation);
 
         $data = $request->all();
+        $img_path = Storage::put('uploads', $data['uploaded_image']);
 
         $apartment = new Apartment;
         $apartment->title            =    $data['title'];
@@ -117,7 +120,7 @@ class ApartmentController extends Controller
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
         $apartment->picture          =    $data['picture'];
-        //$apartment->uploaded_image   =    $data['uploaded_image'];
+        $apartment->uploaded_image   =    $img_path;
         $apartment->visibility = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
         $apartment->latitude = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
         $apartment->longitude = isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;

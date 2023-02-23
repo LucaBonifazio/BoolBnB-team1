@@ -3,9 +3,15 @@
 @section('content')
     @if ($apartment)
     <div class="row">
+        @if ($apartment->uploaded_image)
+            <div class="col">
+                <img src="{{ asset('storage/' . $apartment->uploaded_image) }}" alt="" class="card-img">
+            </div>
+        @else
             <div class="col">
                 <img src="{{ $apartment->picture }}" class="card-img" alt="{{ $apartment->title }}">
             </div>
+        @endif
             <div class="col">
                 <h5 class="card-title">Apartment name: {{ $apartment->title }}</h5>
                 <div class="card-text">Rooms: {{ $apartment->n_rooms }}</div>
