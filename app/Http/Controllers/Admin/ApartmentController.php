@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use App\Service;
 use App\Apartment;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
+use App\Sponsorship;
 
 class ApartmentController extends Controller
 {
@@ -41,7 +43,13 @@ class ApartmentController extends Controller
         //$users = User::all();
         //$apartments = Apartment::where('user_id', $users->id)->paginate();
         $apartments = Apartment::paginate();
-        return view('admin.apartments.index', compact('apartments'));
+        $services = Service::all();
+        $sponsorships = Sponsorship::all();
+        return view('admin.apartments.index', [
+            'apartments' => $apartments,
+            'services' => $services,
+            'sponsorships' => $sponsorships,
+        ]);
     }
 
 

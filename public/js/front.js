@@ -12102,12 +12102,12 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "p-1" }, [
-    _c("h1", [_vm._v("Welcome on BoolBnB")]),
+  return _c("div", [
+    _c("h1", { staticClass: "text-center" }, [_vm._v("Welcome on BoolBnB")]),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "grid h-100" },
+      { staticClass: "grid h-100 container" },
       _vm._l(_vm.arrRandom, function (apartment) {
         return _c(
           "div",

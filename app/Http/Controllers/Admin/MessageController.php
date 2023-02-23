@@ -9,11 +9,16 @@ use App\Http\Controllers\Controller;
 
 class MessageController extends Controller
 {
+    private $validation = [
+        'message' => 'string|required',
+        'date'    => 'date|required',
+    ];
 
     public function index()
     {
         $messages = Message::paginate();
         $apartments = Apartment::all();
+
         return view('admin.messages.index', [
             'messages' => $messages,
             'apartments' => $apartments
@@ -30,6 +35,8 @@ class MessageController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate($this->validation);
+
         $data = $request->all();
 
         $message = new Message;

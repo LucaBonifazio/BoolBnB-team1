@@ -1,7 +1,7 @@
 <template>
-    <div class="p-1">
-        <h1>Welcome on BoolBnB</h1>
-        <div class="grid h-100">
+    <div>
+        <h1 class="text-center">Welcome on BoolBnB</h1>
+        <div class="grid h-100 container">
             <div v-for="apartment in arrRandom" :key="apartment.id" class="tile">
                 <router-link :to="{ name: 'apartment', params: {slug: apartment.slug}}">
                     <img :src="apartment.picture" :alt="apartment.title"/>

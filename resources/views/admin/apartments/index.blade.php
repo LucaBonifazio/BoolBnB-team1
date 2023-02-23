@@ -20,6 +20,7 @@
                         <a href="{{ route('admin.apartments.show', ['apartment' => $apartment]) }}" class="btn btn-primary">Show</a>
                         <a href="{{ route('admin.apartments.edit', ['apartment' => $apartment]) }}" class="btn btn-warning">Edit</a>
                         <button class="btn btn-danger btn_delete" data-id="{{ $apartment->slug}}">Delete</button>
+                        <a href="{{ route('admin.sponsorships.index', ['sponsorships' => $sponsorships]) }}" class="btn btn-info mx-5">Boost</a>
                     </td>
                 </tr>
             @endforeach
