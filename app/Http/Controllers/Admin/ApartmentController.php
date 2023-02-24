@@ -65,9 +65,10 @@ class ApartmentController extends Controller
         $request->validate($this->validation);
 
         $data = $request->all();
-        $img_path = Storage::put('public/uploads', $data['uploaded_image']);
-        // La riga di codice sottostante funziona per windows 11, per gli altri non serve
-        $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
+        $img_path = Storage::put('uploads', $data['uploaded_image']);
+        // Le righe di codice sottostante funzionano per windows 11, per gli altri non serve
+        // $img_path = Storage::put('public/uploads', $data['uploaded_image']);
+        // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
 
         $apartment = new Apartment;
         $apartment->uploaded_image = $img_path;
@@ -113,9 +114,10 @@ class ApartmentController extends Controller
         $request->validate($this->validation);
 
         $data = $request->all();
-        $img_path = Storage::put('public/uploads', $data['uploaded_image']);
-        // La riga di codice sottostante funziona per windows 11, per gli altri non serve
-        $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
+        $img_path = Storage::put('uploads', $data['uploaded_image']);
+        // Le righe di codice sottostante funzionano per windows 11, per gli altri non serve
+        // $img_path = Storage::put('public/uploads', $data['uploaded_image']);
+        // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
 
         $apartment->title            =    $data['title'];
         $apartment->slug             =    $data['slug'];
