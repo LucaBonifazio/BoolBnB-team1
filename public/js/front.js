@@ -11995,7 +11995,10 @@ var render = function () {
                           {
                             staticClass: "btn btn-primary",
                             attrs: {
-                              to: { name: "item", params: { slug: item.slug } },
+                              to: {
+                                name: "apartment",
+                                params: { slug: item.slug },
+                              },
                             },
                           },
                           [_vm._v("Details")]
