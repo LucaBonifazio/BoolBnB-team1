@@ -19,18 +19,18 @@ class CreateSponsorshipsTable extends Migration
 
         DB::table('sponsorships')->insert([
             [
-                'type' => 'Bronze Sponsorship',
-                'price' => 2.99,
+                'type'         => 'Bronze Sponsorship',
+                'price'        => 2.99,
                 'sponsor_time' => 24,
             ],
             [
-                'type' => 'Silver Sponsorship',
-                'price' => 5.99,
+                'type'         => 'Silver Sponsorship',
+                'price'        => 5.99,
                 'sponsor_time' => 72,
             ],
             [
-                'type' => 'Gold Sponsorship',
-                'price' => 9.99,
+                'type'         => 'Gold Sponsorship',
+                'price'        => 9.99,
                 'sponsor_time' => 144,
             ]
         ]);

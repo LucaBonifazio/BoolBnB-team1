@@ -32,7 +32,7 @@ class PageController extends Controller
             'message'       => $message,
             'service'       => $service,
             'sponsorship'   => $sponsorship,
-            'view' => $view,
+            'view'          => $view,
         ]);
     }
 }

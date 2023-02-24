@@ -46,8 +46,8 @@ class ApartmentController extends Controller
         $services = Service::all();
         $sponsorships = Sponsorship::all();
         return view('admin.apartments.index', [
-            'apartments' => $apartments,
-            'services' => $services,
+            'apartments'   => $apartments,
+            'services'     => $services,
             'sponsorships' => $sponsorships,
         ]);
     }
@@ -77,9 +77,9 @@ class ApartmentController extends Controller
         $apartment->square_meters    =    $data['square_meters'];
         //$apartment->picture          =    $data['picture'];
         $apartment->uploaded_image   =    $img_path;
-        $apartment->visibility = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
-        $apartment->latitude = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
-        $apartment->longitude = isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
+        $apartment->visibility       = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
+        $apartment->latitude         = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
+        $apartment->longitude        = isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
         $apartment->state            =    $data['state'];
         $apartment->city             =    $data['city'];
         $apartment->address          =    $data['address'];
@@ -120,9 +120,9 @@ class ApartmentController extends Controller
         $apartment->square_meters    =    $data['square_meters'];
         //$apartment->picture          =    $data['picture'];
         $apartment->uploaded_image   =    $img_path;
-        $apartment->visibility = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
-        $apartment->latitude = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
-        $apartment->longitude = isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
+        $apartment->visibility       = isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
+        $apartment->latitude         = isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
+        $apartment->longitude        = isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
         $apartment->state            =    $data['state'];
         $apartment->city             =    $data['city'];
         $apartment->address          =    $data['address'];
