@@ -11894,14 +11894,14 @@ var render = function () {
   return _c("section", { staticClass: "container" }, [
     _vm.results
       ? _c("div", [
-          _c("h1", [_vm._v(_vm._s(_vm.results.title))]),
+          _c("h1", [_vm._v(_vm._s(_vm.slug))]),
           _vm._v(" "),
           _c("img", {
             staticClass: "card-img-top",
             attrs: { src: _vm.results.picture, alt: _vm.results.title },
           }),
           _vm._v(" "),
-          _c("div", [_vm._v(_vm._s(_vm.results.n_beds))]),
+          _c("div", [_vm._v(_vm._s(_vm.results.city))]),
         ])
       : _c("div", [
           _c("img", {
