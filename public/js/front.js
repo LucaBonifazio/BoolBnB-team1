@@ -11984,7 +11984,10 @@ var render = function () {
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "card-body d-flex flex-column" },
+                      {
+                        staticClass:
+                          "card-body d-flex flex-column justify-content-end",
+                      },
                       [
                         _c("h5", { staticClass: "card-title" }, [
                           _vm._v(_vm._s(item.title)),

@@ -17,7 +17,7 @@
                         class="card-img-top"
                         :alt="item.title"
                     />
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column justify-content-end">
                         <h5 class="card-title">{{ item.title }}</h5>
                         <!-- <p class="card-text flex-grow-1">{{ item.excerpt }}</p> -->
                         <router-link :to="{ name: 'apartment', params: {slug: item.slug}}" class="btn btn-primary">Details</router-link>
