@@ -5108,10 +5108,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -5241,11 +5237,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      results: null
+      results: null,
+      searchTerm: ""
     };
   },
   methods: {
@@ -5258,6 +5259,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.changePage(1);
+  },
+  computed: {
+    filteredItems: function filteredItems() {
+      var _this2 = this;
+      return this.results.data.filter(function (apartment) {
+        return apartment.title.toLowerCase().includes(_this2.searchTerm.toLowerCase());
+      });
+    }
   }
 });
 
@@ -11815,8 +11824,6 @@ var render = function () {
                 _vm._v(" "),
                 _vm._m(1),
               ]),
-              _vm._v(" "),
-              _vm._m(2),
             ]
           ),
         ],
@@ -11858,27 +11865,6 @@ var staticRenderFns = [
           attrs: { href: "http://localhost:8000/admin" },
         },
         [_vm._v("Dashboard")]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("form", { staticClass: "d-flex", attrs: { role: "search" } }, [
-      _c("input", {
-        staticClass: "form-control me-2",
-        attrs: {
-          type: "search",
-          placeholder: "Search",
-          "aria-label": "Search",
-        },
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-success", attrs: { type: "submit" } },
-        [_vm._v("Search")]
       ),
     ])
   },
@@ -11954,20 +11940,46 @@ var render = function () {
   return _c("section", { staticClass: "container" }, [
     _c("h1", [_vm._v("Apartments")]),
     _vm._v(" "),
+    _c("div", { staticClass: "form-outline" }, [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.searchTerm,
+            expression: "searchTerm",
+          },
+        ],
+        staticClass: "form-control",
+        attrs: { type: "text", id: "form12", placeholder: "Search apartments" },
+        domProps: { value: _vm.searchTerm },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.searchTerm = $event.target.value
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("label", { staticClass: "form-label", attrs: { for: "form12" } }),
+    ]),
+    _vm._v(" "),
     _vm.results
       ? _c(
           "div",
           { staticClass: "row g-3" },
           [
-            _vm._l(_vm.results.data, function (apartment) {
+            _vm._l(_vm.filteredItems, function (item) {
               return _c(
                 "div",
-                { key: apartment.id, staticClass: "col-sm-6 col-md-4" },
+                { key: item.id, staticClass: "col-sm-6 col-md-4" },
                 [
                   _c("div", { staticClass: "card h-100" }, [
                     _c("img", {
                       staticClass: "card-img-top",
-                      attrs: { src: apartment.picture, alt: apartment.title },
+                      attrs: { src: item.picture, alt: item.title },
                     }),
                     _vm._v(" "),
                     _c(
@@ -11975,7 +11987,7 @@ var render = function () {
                       { staticClass: "card-body d-flex flex-column" },
                       [
                         _c("h5", { staticClass: "card-title" }, [
-                          _vm._v(_vm._s(apartment.title)),
+                          _vm._v(_vm._s(item.title)),
                         ]),
                         _vm._v(" "),
                         _c(
@@ -11983,10 +11995,7 @@ var render = function () {
                           {
                             staticClass: "btn btn-primary",
                             attrs: {
-                              to: {
-                                name: "apartment",
-                                params: { slug: apartment.slug },
-                              },
+                              to: { name: "item", params: { slug: item.slug } },
                             },
                           },
                           [_vm._v("Details")]

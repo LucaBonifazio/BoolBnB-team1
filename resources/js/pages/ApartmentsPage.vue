@@ -1,26 +1,30 @@
 <template>
     <section class="container">
         <h1>Apartments</h1>
+        <div class="form-outline">
+            <input type="text" id="form12" class="form-control" placeholder="Search apartments" v-model="searchTerm"/>
+            <label class="form-label" for="form12"></label>
+        </div>
         <div class="row g-3" v-if="results">
             <div
-                v-for="apartment in results.data"
-                :key="apartment.id"
+                v-for="item in filteredItems"
+                :key="item.id"
                 class="col-sm-6 col-md-4"
             >
                 <div class="card h-100">
                     <img
-                        :src="apartment.picture"
+                        :src="item.picture"
                         class="card-img-top"
-                        :alt="apartment.title"
+                        :alt="item.title"
                     />
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">{{ apartment.title }}</h5>
-                        <!-- <p class="card-text flex-grow-1">{{ apartment.excerpt }}</p> -->
-                        <router-link :to="{ name: 'apartment', params: {slug: apartment.slug}}" class="btn btn-primary">Details</router-link>
+                        <h5 class="card-title">{{ item.title }}</h5>
+                        <!-- <p class="card-text flex-grow-1">{{ item.excerpt }}</p> -->
+                        <router-link :to="{ name: 'item', params: {slug: item.slug}}" class="btn btn-primary">Details</router-link>
                     </div>
                 </div>
             </div>
-<nav class="mt-3">
+            <nav class="mt-3">
                 <ul class="pagination">
                     <li
                         class="page-item"
@@ -60,6 +64,7 @@ export default {
     data() {
         return {
             results: null,
+            searchTerm: ""
         };
     },
     methods: {
@@ -71,6 +76,14 @@ export default {
     created() {
         this.changePage(1);
     },
+
+    computed: {
+        filteredItems() {
+            return this.results.data.filter(apartment => {
+                return apartment.title.toLowerCase().includes(this.searchTerm.toLowerCase());
+            });
+        }
+    }
 };
 </script>
 
