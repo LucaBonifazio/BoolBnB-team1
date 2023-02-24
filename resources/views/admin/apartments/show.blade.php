@@ -28,7 +28,7 @@
                     @if ($apartment->services->all())
                         <div>
                             @foreach ($apartment->services as $service)
-                                {{ $service->name }}</a>{{ $loop->last ? '' : ', ' }}
+                                {{ $service->name }}{{ $loop->last ? '' : ', ' }}
                             @endforeach
                         </div>
                     @endif

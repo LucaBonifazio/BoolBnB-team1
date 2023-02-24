@@ -1,6 +1,7 @@
 <?php
 
 use App\User;
+use App\Service;
 use App\Apartment;
 use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
@@ -11,7 +12,9 @@ class ApartmentSeeder extends Seeder
     public function run(Faker $faker)
     {
         $user = User::all('id')->all();
-        
+        $services = Service::all()->pluck('id');
+        $serviceCount = count($services);
+
         for ($i = 0 ; $i < 50 ; $i++) {
             $title = $faker->words(rand(3, 7), true);
             //$img_path = null;
@@ -36,15 +39,17 @@ class ApartmentSeeder extends Seeder
                 'apartment_number'   => $faker->buildingNumber(),
             ]);
 
+            $apartment->services()->attach($faker->randomElements($services, rand(0, ($serviceCount > 7) ? 7 : $serviceCount)));
         }
+
     }
 }
 
 // $number = rand(0, 276);
             // if ($number) {
             //     $contents = new File(DIR . '/../../storage/app/lorempicsum/picsum' . $number . '.jpg');
-            //     
+            //
             // } else {
-            //     
+            //
             // }
 //

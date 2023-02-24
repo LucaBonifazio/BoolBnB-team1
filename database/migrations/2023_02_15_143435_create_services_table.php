@@ -47,8 +47,8 @@ class CreateServicesTable extends Migration
                 'slug' => 'Smoking',
             ],
             [
-                'name' => 'Anlimales',
-                'slug' => 'Anlimales',
+                'name' => 'Pets',
+                'slug' => 'Pets',
             ],
             [
                 'name' => 'Air Condtioning',

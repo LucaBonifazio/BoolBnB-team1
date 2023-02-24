@@ -20,7 +20,7 @@
                     <td>{{ $apartment->title }}</td>
                     <td>
                         @foreach ($apartment->services as $service)
-                            {{ $service->name }} {{ $loop->last ? '' : ', ' }}
+                            {{ $service->name }}{{ $loop->last ? '' : ', ' }}
                         @endforeach
                     </td>
                     <td>
