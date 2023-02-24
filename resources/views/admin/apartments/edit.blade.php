@@ -126,20 +126,6 @@
             </div>
         </div>
 
-        <div class="mb-3 form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked @error('visibility') is-invalid @enderror id="visibility" name="visibility"  value="{{ old('visibility', $apartment->visibility) }}">
-            <label class="form-check-label" for="flexSwitchCheckChecked">Visibility</label>
-            @error('visibility')
-                <div class="invalid-feedback">
-                    <ul>
-                        @foreach ($errors->get('visibility') as $message)
-                            <li>{{ $message }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @enderror
-        </div>
-
         <div class="mb-3">
             <label for="latitude" class="form-label">Latitude</label>
             <input type="number" class="form-control @error('latitude') is-invalid @enderror" id="latitude" name="latitude" value="{{ old('latitude', $apartment->latitude) }}">

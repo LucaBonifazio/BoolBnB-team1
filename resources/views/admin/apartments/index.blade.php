@@ -8,6 +8,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Visibility</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -16,6 +17,21 @@
                 <tr>
                     <th scope="row">{{ $apartment->id }}</th>
                     <td>{{ $apartment->title }}</td>
+                    <td>
+                        <div class="mb-3 form-check form-switch">
+                            <input class="form-check-input" checked type="checkbox" role="switch" id="flexSwitchCheckChecked" @error('visibility') is-invalid @enderror id="visibility" name="visibility"  value="{{ old('visibility', $apartment->visibility) }}">
+                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            @error('visibility')
+                                <div class="invalid-feedback">
+                                    <ul>
+                                        @foreach ($errors->get('visibility') as $message)
+                                            <li>{{ $message }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @enderror
+                        </div>
+                    </td>
                     <td>
                         <a href="{{ route('admin.apartments.show', ['apartment' => $apartment]) }}" class="btn btn-primary">Show</a>
                         <a href="{{ route('admin.apartments.edit', ['apartment' => $apartment]) }}" class="btn btn-warning">Edit</a>

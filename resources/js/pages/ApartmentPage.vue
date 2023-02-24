@@ -1,13 +1,13 @@
 <template>
     <section class="container">
         <div v-if="results">
-            <h1>{{ slug }}</h1>
+            <h1>{{ results.title }}</h1>
             <img
                 :src="results.picture"
                 class="card-img-top"
                 :alt="results.title"
             >
-            <h5>{{ results.title }}</h5>
+            <div>{{ results.n_beds }}</div>
         </div>
         <!-- <div v-else-if="!results">
             <Page404/>

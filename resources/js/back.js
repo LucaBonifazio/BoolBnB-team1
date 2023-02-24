@@ -25,3 +25,20 @@ if (eleOverlay) {
         eleOverlay.classList.add('d-none');
     })
 }
+
+
+// // selezioniamo tutte le righe degli appartamenti
+// const apartmentRows = document.querySelectorAll('tbody tr');
+
+// // aggiungiamo un event listener alla checkbox di ogni riga
+// apartmentRows.forEach((row) => {
+//   const visibilityCheckbox = row.querySelector('#visibility');
+//   visibilityCheckbox.addEventListener('change', () => {
+//     // se la checkbox non è selezionata, nascondiamo la riga dell'appartamento
+//     if (!visibilityCheckbox.checked) {
+//       row.style.display = 'none';
+//     } else {
+//       row.style.display = '';
+//     }
+//   });
+// });
