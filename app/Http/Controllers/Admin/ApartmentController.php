@@ -55,6 +55,12 @@ class ApartmentController extends Controller
 
     public function create()
     {
+        $services = Service::all();
+
+        return view('admin.apartments.create', [
+            'services'          => $services,
+        ]);
+
         return view('admin.apartments.create');
     }
 
@@ -90,6 +96,8 @@ class ApartmentController extends Controller
         $apartment->apartment_number =    $data['apartment_number'];
         $apartment->save();
 
+        $apartment->services()->attach($data['services']);
+
         return redirect()->route('admin.apartments.show', ['apartment' => $apartment]);
     }
 
@@ -102,8 +110,11 @@ class ApartmentController extends Controller
 
     public function edit(Apartment $apartment)
     {
+        $services = Service::all();
+
         return view('admin.apartments.edit', [
-            'apartment' => $apartment
+            'apartment' => $apartment,
+            'services' => $services,
         ]);
     }
 
@@ -136,13 +147,15 @@ class ApartmentController extends Controller
         $apartment->apartment_number =    $data['apartment_number'];
         $apartment->update();
 
+        $apartment->services()->sync($data['services']);
+
         return redirect()->route('admin.apartments.show', ['apartment' => $apartment]);
     }
 
 
     public function destroy(Apartment $apartment)
     {
-        // $apartment->tags()->detach();
+        $apartment->services()->detach();
         $apartment->delete();
 
         return redirect()->route('admin.apartments.index')->with('success_delete', $apartment);

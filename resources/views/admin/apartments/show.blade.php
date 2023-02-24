@@ -24,6 +24,15 @@
                 <div class="card-text">City: {{ $apartment->city }}</div>
                 <div class="card-text">Address: {{ $apartment->address }}</div>
                 <div class="card-text">Apartment number: {{ $apartment->apartment_number }}</div>
+                <div class="card-text">Services:
+                    @if ($apartment->services->all())
+                        <div>
+                            @foreach ($apartment->services as $service)
+                                {{ $service->name }}</a>{{ $loop->last ? '' : ', ' }}
+                            @endforeach
+                        </div>
+                    @endif
+                </div>
             </div>
         @else
             <div>

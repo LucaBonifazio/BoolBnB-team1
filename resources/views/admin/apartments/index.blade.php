@@ -8,6 +8,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
+                <th scope="col">Services</th>
                 <th scope="col">Visibility</th>
                 <th scope="col">Action</th>
             </tr>
@@ -17,6 +18,11 @@
                 <tr>
                     <th scope="row">{{ $apartment->id }}</th>
                     <td>{{ $apartment->title }}</td>
+                    <td>
+                        @foreach ($apartment->services as $service)
+                            {{ $service->name }} {{ $loop->last ? '' : ', ' }}
+                        @endforeach
+                    </td>
                     <td>
                         <div class="mb-3 form-check form-switch">
                             <input class="form-check-input" checked type="checkbox" role="switch" id="flexSwitchCheckChecked" @error('visibility') is-invalid @enderror id="visibility" name="visibility"  value="{{ old('visibility', $apartment->visibility) }}">

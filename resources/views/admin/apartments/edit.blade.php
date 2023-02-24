@@ -210,6 +210,34 @@
             @enderror
         </div>
 
+        <div class="col-12">
+            <h5>Services</h5>
+            @foreach ($services as $service)
+                <div class="form-check">
+                    <input
+                        id="service-{{ $service->id }}"
+                        class="form-check-input @error('services.') is-invalid @enderror"
+                        type="checkbox"
+                        value="{{ $service->id }}"
+                        name="services[]"
+                        @if (in_array($service->id, old('services', $apartment->services->pluck('id')->all()))) checked @endif
+                    >
+                    <label class="form-check-label" for="service-{{ $service->id }}">
+                        {{ $service->name }}
+                    </label>
+                    <div class="invalid-feedback">
+                        @error('services.')
+                            <ul>
+                                @foreach ($errors->get('services.*') as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        @enderror
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 @endsection

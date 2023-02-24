@@ -210,6 +210,30 @@
             @enderror
         </div>
 
+        <div class="col-12">
+            <h5>Services</h5>
+            @foreach ($services as $service)
+                <div class="form-check">
+                    <input
+                        id="service-{{ $service->id }}"
+                        class="form-check-input"
+                        type="checkbox"
+                        value="{{ $service->id }}"
+                        name="services[]"
+                        @if (in_array($service->id, old('services', []))) checked @endif
+                    >
+                    <label class="form-check-label" for="service-{{ $service->id }}">
+                        {{ $service->name }}
+                    </label>
+                </div>
+            @endforeach
+            @if ($errors->has('services') || $errors->has('services.*'))
+                <div>
+                    Ci sono problemi con i services
+                </div>
+            @endif
+        </div>
+
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
 @endsection
