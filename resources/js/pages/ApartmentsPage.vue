@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="mt-3">
+            <!-- <nav class="mt-3">
                 <ul class="pagination">
                     <li
                         class="page-item"
@@ -50,7 +50,7 @@
                         <span class="page-link">Next</span>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
         <div v-else>
             <img class="d-flex m-auto" src="https://media.tenor.com/OTzJy4d4xGMAAAAC/computer-stick-man.gif" alt="gif">
@@ -102,7 +102,5 @@ export default {
         --bs-btn-hover-bg: rgb(245, 245, 245);
         --bs-btn-hover-color: #bd1c1c;
     }
-
-
 
 </style>

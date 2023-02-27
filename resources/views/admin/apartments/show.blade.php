@@ -34,6 +34,7 @@
                     @endif
                 </div>
             </div>
+        <div id="map" class="map mt-3" style='width: 100%; height: 600px; border-radius: 10px;'>
         @else
             <div>
                 <img class="d-flex m-auto" src="https://media.tenor.com/OTzJy4d4xGMAAAAC/computer-stick-man.gif" alt="gif">

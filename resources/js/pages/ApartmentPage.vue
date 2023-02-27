@@ -1,14 +1,32 @@
 <template>
     <section class="container">
+
+
         <div v-if="results">
-            <h1>{{ slug }}</h1>
-            <img
-                :src="results.picture"
-                class="card-img-top"
-                :alt="results.title"
-            >
-            <div>{{ results.city }}</div>
+            <div class="row">
+                <div class="col-6 card_apt">
+                    <img
+                        :src="results.picture"
+                        class="card-img-top"
+                        :alt="results.title"
+                    >
+                </div>
+                <div class="col-5 card_apt p-4">
+                    <h1>{{ slug }}</h1>
+                    <div>Rooms: {{ results.n_rooms }}</div>
+                    <div> Beds: {{ results.n_beds }}</div>
+                    <font-awesome-icon icon="fa-solid fa-house" />
+                    <div>Bathrooms: {{ results.n_bathrooms }}</div>
+                    <div>Square Meters: {{ results.square_meters }}</div>
+                    <div>City: {{ results.city }}</div>
+                    <div>Address: {{ results.address }} N. {{ results.apartment_number }}</div>
+                    <div>Latitude: {{ results.latitude }} Longitude: {{ results.longitude }}</div>
+                </div>
+            </div>
+
         </div>
+
+
         <!-- <div v-else-if="!results">
             <Page404/>
         </div> -->
@@ -49,5 +67,35 @@ export default ({
 </script>
 
 <style lang="scss" scoped>
+
+    .card_apt{
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    .card-img-top{
+        border-radius: 5px;
+    }
+
+    .row > *{
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .row{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color:white;
+        border-radius: 17px;
+    }
+
+    h1{
+        color: red;
+        font-size: 45px;
+    }
 
 </style>

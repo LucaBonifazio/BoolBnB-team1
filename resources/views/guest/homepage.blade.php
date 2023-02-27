@@ -9,18 +9,18 @@
 
     {{-- TOMTOM --}}
     <!-- Replace version in the URL with desired library version -->
-    <link
+    {{-- <link
     rel="stylesheet"
     type="text/css"
     href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps.css"
-    />
+    /> --}}
 
-    <style>
+    {{-- <style>
         #map {
             width: 800px;
             height: 380px;
         }
-    </style>
+    </style> --}}
     {{-- / TOMTOM --}}
 
 </head>
@@ -34,7 +34,7 @@
     PARTE DI TOMTOM - GESTIONE DELLA MAPPA DEL NAVIGATORE
 --}}
 
-    <div id="map" class="map"></div>
+    {{-- <div id="map" class="map"></div>
 
 
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps-web.min.js"></script>
@@ -53,7 +53,7 @@
                     var marker = new tt.Marker().setLngLat(center).addTo(map)
                 })
 
-    </script>
+    </script> --}}
 
 {{--
     / PARTE DI TOMTOM - GESTIONE DELLA MAPPA DEL NAVIGATORE

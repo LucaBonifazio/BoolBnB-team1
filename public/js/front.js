@@ -5144,6 +5144,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // import Page404 from './Page404.vue';
 
@@ -10648,7 +10666,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".logo[data-v-6dde423b] {\n  font-size: 2rem;\n  font-weight: 700;\n  color: red;\n  text-decoration: none;\n}\n.navbar[data-v-6dde423b] {\n  box-shadow: rgba(148, 148, 148, 0.35) 0px 5px 15px;\n  margin-bottom: 30px;\n  background-color: white;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".logo[data-v-6dde423b] {\n  font-size: 2rem;\n  font-weight: 700;\n  color: red;\n  text-decoration: none;\n}\n.navbar[data-v-6dde423b] {\n  box-shadow: rgba(148, 148, 148, 0.35) 0px 5px 15px;\n  margin-bottom: 30px;\n  background-color: white;\n}\n.navbar-brand[data-v-6dde423b]:focus {\n  color: red;\n}\n.navbar-brand[data-v-6dde423b]:hover {\n  color: black;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".card_apt[data-v-ca80d4b0] {\n  font-weight: 500;\n  font-size: 17px;\n}\n.card-img-top[data-v-ca80d4b0] {\n  border-radius: 5px;\n}\n.row > *[data-v-ca80d4b0] {\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 30px;\n  padding-bottom: 30px;\n}\n.row[data-v-ca80d4b0] {\n  display: flex;\n  justify-content: center;\n  gap: 10px;\n  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n  background-color: white;\n  border-radius: 17px;\n}\nh1[data-v-ca80d4b0] {\n  color: red;\n  font-size: 45px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11043,6 +11085,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_style_index_0_id_6dde423b_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ApartmentPage_vue_vue_type_style_index_0_id_ca80d4b0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ApartmentPage_vue_vue_type_style_index_0_id_ca80d4b0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ApartmentPage_vue_vue_type_style_index_0_id_ca80d4b0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -11480,15 +11552,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ApartmentPage_vue_vue_type_template_id_ca80d4b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ApartmentPage.vue?vue&type=template&id=ca80d4b0&scoped=true& */ "./resources/js/pages/ApartmentPage.vue?vue&type=template&id=ca80d4b0&scoped=true&");
 /* harmony import */ var _ApartmentPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ApartmentPage.vue?vue&type=script&lang=js& */ "./resources/js/pages/ApartmentPage.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ApartmentPage_vue_vue_type_style_index_0_id_ca80d4b0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true& */ "./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ApartmentPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ApartmentPage_vue_vue_type_template_id_ca80d4b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
   _ApartmentPage_vue_vue_type_template_id_ca80d4b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -11690,6 +11764,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_style_index_0_id_6dde423b_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Navbar.vue?vue&type=style&index=0&id=6dde423b&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=style&index=0&id=6dde423b&lang=scss&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true& ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ApartmentPage_vue_vue_type_style_index_0_id_ca80d4b0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ApartmentPage.vue?vue&type=style&index=0&id=ca80d4b0&lang=scss&scoped=true&");
 
 
 /***/ }),
@@ -11963,14 +12050,59 @@ var render = function () {
   return _c("section", { staticClass: "container" }, [
     _vm.results
       ? _c("div", [
-          _c("h1", [_vm._v(_vm._s(_vm.slug))]),
-          _vm._v(" "),
-          _c("img", {
-            staticClass: "card-img-top",
-            attrs: { src: _vm.results.picture, alt: _vm.results.title },
-          }),
-          _vm._v(" "),
-          _c("div", [_vm._v(_vm._s(_vm.results.city))]),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-6 card_apt" }, [
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: { src: _vm.results.picture, alt: _vm.results.title },
+              }),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-5 card_apt p-4" },
+              [
+                _c("h1", [_vm._v(_vm._s(_vm.slug))]),
+                _vm._v(" "),
+                _c("div", [_vm._v("Rooms: " + _vm._s(_vm.results.n_rooms))]),
+                _vm._v(" "),
+                _c("div", [_vm._v(" Beds: " + _vm._s(_vm.results.n_beds))]),
+                _vm._v(" "),
+                _c("font-awesome-icon", {
+                  attrs: { icon: "fa-solid fa-house" },
+                }),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v("Bathrooms: " + _vm._s(_vm.results.n_bathrooms)),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v("Square Meters: " + _vm._s(_vm.results.square_meters)),
+                ]),
+                _vm._v(" "),
+                _c("div", [_vm._v("City: " + _vm._s(_vm.results.city))]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v(
+                    "Address: " +
+                      _vm._s(_vm.results.address) +
+                      " N. " +
+                      _vm._s(_vm.results.apartment_number)
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v(
+                    "Latitude: " +
+                      _vm._s(_vm.results.latitude) +
+                      " Longitude: " +
+                      _vm._s(_vm.results.longitude)
+                  ),
+                ]),
+              ],
+              1
+            ),
+          ]),
         ])
       : _c("div", [
           _c("img", {
@@ -12039,118 +12171,49 @@ var render = function () {
       ? _c(
           "div",
           { staticClass: "row g-3" },
-          [
-            _vm._l(_vm.filteredItems, function (item) {
-              return _c(
-                "div",
-                { key: item.id, staticClass: "col-sm-6 col-md-4 apt-card" },
-                [
-                  _c("div", { staticClass: "card h-100" }, [
-                    _c("img", {
-                      staticClass: "card-img-top",
-                      attrs: { src: item.picture, alt: item.title },
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "card-body d-flex flex-column justify-content-end",
-                      },
-                      [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _vm._v(_vm._s(item.title)),
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "btn btn-danger",
-                            attrs: {
-                              to: {
-                                name: "apartment",
-                                params: { slug: item.slug },
-                              },
-                            },
-                          },
-                          [_vm._v("Details")]
-                        ),
-                      ],
-                      1
-                    ),
-                  ]),
-                ]
-              )
-            }),
-            _vm._v(" "),
-            _c("nav", { staticClass: "mt-3" }, [
-              _c(
-                "ul",
-                { staticClass: "pagination" },
-                [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "page-item",
-                      class: { disabled: _vm.results.current_page == 1 },
-                      on: {
-                        click: function ($event) {
-                          return _vm.changePage(_vm.results.current_page - 1)
-                        },
-                      },
-                    },
-                    [
-                      _c("span", { staticClass: "page-link" }, [
-                        _vm._v("Previous"),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._l(_vm.results.last_page, function (page) {
-                    return _c(
-                      "li",
-                      {
-                        key: page,
-                        staticClass: "page-item",
-                        class: { active: _vm.results.current_page == page },
-                        on: {
-                          click: function ($event) {
-                            return _vm.changePage(page)
-                          },
-                        },
-                      },
-                      [
-                        _c(
-                          "span",
-                          { staticClass: "page-link", attrs: { href: "" } },
-                          [_vm._v(_vm._s(page))]
-                        ),
-                      ]
-                    )
+          _vm._l(_vm.filteredItems, function (item) {
+            return _c(
+              "div",
+              { key: item.id, staticClass: "col-sm-6 col-md-4 apt-card" },
+              [
+                _c("div", { staticClass: "card h-100" }, [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    attrs: { src: item.picture, alt: item.title },
                   }),
                   _vm._v(" "),
                   _c(
-                    "li",
+                    "div",
                     {
-                      staticClass: "page-item",
-                      class: {
-                        disabled:
-                          _vm.results.current_page == _vm.results.last_page,
-                      },
-                      on: {
-                        click: function ($event) {
-                          return _vm.changePage(_vm.results.current_page + 1)
-                        },
-                      },
+                      staticClass:
+                        "card-body d-flex flex-column justify-content-end",
                     },
-                    [_c("span", { staticClass: "page-link" }, [_vm._v("Next")])]
+                    [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(item.title)),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: {
+                            to: {
+                              name: "apartment",
+                              params: { slug: item.slug },
+                            },
+                          },
+                        },
+                        [_vm._v("Details")]
+                      ),
+                    ],
+                    1
                   ),
-                ],
-                2
-              ),
-            ]),
-          ],
-          2
+                ]),
+              ]
+            )
+          }),
+          0
         )
       : _c("div", [
           _c("img", {
