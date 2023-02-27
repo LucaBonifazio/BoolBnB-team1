@@ -98,7 +98,7 @@
             @enderror
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="picture" class="form-label">Picture</label>
             <input type="url" class="form-control @error('picture') is-invalid @enderror" id="picture" name="picture" value="{{ old('picture', $apartment->picture) }}">
             @error('picture')
@@ -110,11 +110,11 @@
                     </ul>
                 </div>
             @enderror
-        </div>
+        </div> --}}
 
         <div class="mb-3">
             <label for="uploaded_image" class="form-label">Uploaded Image</label>
-            <input class="form-control @error('uploaded_image') is-invalid @enderror" type="file" id="uploaded_image" name="uploaded_image" value="{{ old('uploaded_image', $apartment->uploaded_image) }}">
+            <input class="form-control @error('uploaded_image') is-invalid @enderror" type="file" id="uploaded_image" name="uploaded_image">
             <div class="invalid-feedback">
                 @error('uploaded_image')
                     <ul>

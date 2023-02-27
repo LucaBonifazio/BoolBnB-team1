@@ -27,7 +27,7 @@ class ApartmentController extends Controller
         'n_bathrooms'       => 'integer|required',
         'square_meters'     => 'integer|required',
         'picture'           => 'url',
-        'uploaded_image'    => 'image',
+        // 'uploaded_image'    => 'image',
         'visibility'        => 'boolean',
         'latitude'          => 'required|between:-90,90',
         'longitude'         => 'required|between:-180,180',
@@ -37,6 +37,14 @@ class ApartmentController extends Controller
         'city'              => 'required|string|max:200',
         'address'           => 'required|string|max:250',
         'apartment_number'  => 'integer|required' //TODO:verificare una volta installata l'API
+    ];
+
+    private $validation_store = [
+        'uploaded_image'    => 'required|image|max:1024',
+    ];
+
+    private $validation_update = [
+        'uploaded_image'    => 'nullable|image|max:1024',
     ];
 
 
@@ -67,8 +75,10 @@ class ApartmentController extends Controller
 
     public function store(Request $request)
     {
-        $this->validation['slug'][] = 'unique:apartments';
+
+        $this->validation_store['slug'][] = 'unique:apartments';
         $request->validate($this->validation);
+        $request->validate($this->validation_store);
 
         $data = $request->all();
         $img_path = Storage::put('uploads', $data['uploaded_image']);
@@ -77,7 +87,6 @@ class ApartmentController extends Controller
         // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
 
         $apartment = new Apartment;
-        $apartment->uploaded_image = $img_path;
         $apartment->user_id          =    auth()->user()->id;
         $apartment->title            =    $data['title'];
         $apartment->slug             =    $data['slug'];
@@ -86,7 +95,7 @@ class ApartmentController extends Controller
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
         //$apartment->picture          =    $data['picture'];
-        $apartment->uploaded_image   =    $img_path;
+        // $apartment->uploaded_image   =    $img_path;
         $apartment->visibility       =    isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
         $apartment->latitude         =    isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
         $apartment->longitude        =    isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
@@ -121,11 +130,20 @@ class ApartmentController extends Controller
 
     public function update(Request $request, Apartment $apartment)
     {
-        $this->validation['slug'][] = Rule::unique('apartments')->ignore($apartment);
+        $this->validation_update['slug'][] = Rule::unique('apartments')->ignore($apartment);
+        $request->validate($this->validation_update);
         $request->validate($this->validation);
 
         $data = $request->all();
-        $img_path = Storage::put('uploads', $data['uploaded_image']);
+
+        if (isset($data['uploaded_image'])) {
+            $img_path = Storage::put('uploads', $data['uploaded_image']);
+            Storage::delete($apartment->uploaded_image);
+        } else {
+            $img_path = $apartment->uploaded_image;
+        }
+
+        // $img_path = Storage::put('uploads', $data['uploaded_image']);
         // Le righe di codice sottostante funzionano per windows 11, per gli altri non serve
         // $img_path = Storage::put('public/uploads', $data['uploaded_image']);
         // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
