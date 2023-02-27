@@ -45,4 +45,12 @@ export default {
         background-color: white;
     }
 
+    .navbar-brand:focus {
+        color: red;
+    }
+
+    .navbar-brand:hover {
+        color: black;
+    }
+
 </style>
