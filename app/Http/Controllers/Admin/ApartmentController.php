@@ -95,7 +95,7 @@ class ApartmentController extends Controller
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
         //$apartment->picture          =    $data['picture'];
-        // $apartment->uploaded_image   =    $img_path;
+        $apartment->uploaded_image   =    $img_path;
         $apartment->visibility       =    isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
         $apartment->latitude         =    isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
         $apartment->longitude        =    isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
