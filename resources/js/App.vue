@@ -24,6 +24,17 @@ export default {
 <style lang="scss">
     @import '~bootstrap/scss/bootstrap';
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color:rgb(245, 245, 245);
+    }
+
+
 </style>
 
 <!-- LBnYIIJKuwBHbW3xyrFE1uXJSVAINMJW    API KEY TOM TOM-->

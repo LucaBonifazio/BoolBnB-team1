@@ -2,7 +2,7 @@
     <section>
         <nav class="navbar navbar-expand-md bg-body-tertiary">
             <div class="container-fluid">
-                <router-link :to="{ name: 'homepage' }" class="navbar-brand">BoolBnB</router-link>
+                <router-link :to="{ name: 'homepage' }" class="navbar-brand logo">BoolBnB</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,5 +31,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .logo{
+        font-size: 2rem;
+        font-weight: 700;
+        color: red;
+        text-decoration: none;
+    }
+
+    .navbar{
+        box-shadow: rgb(148 148 148 / 35%) 0px 5px 15px;
+        margin-bottom: 30px;
+        background-color: white;
+    }
 
 </style>

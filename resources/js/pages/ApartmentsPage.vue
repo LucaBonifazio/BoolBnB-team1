@@ -9,7 +9,7 @@
             <div
                 v-for="item in filteredItems"
                 :key="item.id"
-                class="col-sm-6 col-md-4"
+                class="col-sm-6 col-md-4 apt-card"
             >
                 <div class="card h-100">
                     <img
@@ -20,7 +20,7 @@
                     <div class="card-body d-flex flex-column justify-content-end">
                         <h5 class="card-title">{{ item.title }}</h5>
                         <!-- <p class="card-text flex-grow-1">{{ item.excerpt }}</p> -->
-                        <router-link :to="{ name: 'apartment', params: {slug: item.slug}}" class="btn btn-primary">Details</router-link>
+                        <router-link :to="{ name: 'apartment', params: {slug: item.slug}}" class="btn btn-danger">Visualizza</router-link>
                     </div>
                 </div>
             </div>
@@ -92,5 +92,17 @@ export default {
     .pagination{
         cursor: pointer,
     };
+
+    .apt-card{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .btn-danger{
+        --bs-btn-bg: #bd1c1c;
+        --bs-btn-hover-bg: rgb(245, 245, 245);
+        --bs-btn-hover-color: #bd1c1c;
+    }
+
+
 
 </style>
