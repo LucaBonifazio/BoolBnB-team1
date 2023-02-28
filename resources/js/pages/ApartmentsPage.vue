@@ -19,6 +19,7 @@
                     />
                     <div class="card-body d-flex flex-column justify-content-end">
                         <h5 class="card-title">{{ item.title }}</h5>
+                        <div class="card-title">City: {{ item.city }}</div>
                         <!-- <p class="card-text flex-grow-1">{{ item.excerpt }}</p> -->
                         <router-link :to="{ name: 'apartment', params: {slug: item.slug}}" class="btn btn-danger">Details</router-link>
                     </div>

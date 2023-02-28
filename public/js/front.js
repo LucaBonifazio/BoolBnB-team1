@@ -5161,7 +5161,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 // import Page404 from './Page404.vue';
 
@@ -5199,6 +5198,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -12090,15 +12090,6 @@ var render = function () {
                       _vm._s(_vm.results.apartment_number)
                   ),
                 ]),
-                _vm._v(" "),
-                _c("div", [
-                  _vm._v(
-                    "Latitude: " +
-                      _vm._s(_vm.results.latitude) +
-                      " Longitude: " +
-                      _vm._s(_vm.results.longitude)
-                  ),
-                ]),
               ],
               1
             ),
@@ -12191,6 +12182,10 @@ var render = function () {
                     [
                       _c("h5", { staticClass: "card-title" }, [
                         _vm._v(_vm._s(item.title)),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-title" }, [
+                        _vm._v("City: " + _vm._s(item.city)),
                       ]),
                       _vm._v(" "),
                       _c(

@@ -20,7 +20,6 @@
                     <div>Square Meters: {{ results.square_meters }}</div>
                     <div>City: {{ results.city }}</div>
                     <div>Address: {{ results.address }} N. {{ results.apartment_number }}</div>
-                    <div>Latitude: {{ results.latitude }} Longitude: {{ results.longitude }}</div>
                 </div>
             </div>
 
