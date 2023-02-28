@@ -5,11 +5,7 @@
         <div v-if="results">
             <div class="row">
                 <div class="col-6 card_apt">
-                    <img
-                        :src="results.picture"
-                        class="card-img-top"
-                        :alt="results.title"
-                    >
+                    <img :src="results.picture" class="card-img-top" :alt="results.title">
                 </div>
                 <div class="col-5 card_apt">
                     <h1>{{ slug }}</h1>
@@ -45,8 +41,8 @@ const map = tt.map({
     zoom: 17,
 })
 map.on('load', () => {
-            var marker = new tt.Marker().setLngLat(center).addTo(map)
-        })
+    var marker = new tt.Marker().setLngLat(center).addTo(map)
+})
 
 </script>
 
@@ -81,39 +77,38 @@ export default ({
 </script>
 
 <style lang="scss" scoped>
+.card_apt {
+    font-weight: 500;
+    font-size: 17px;
+}
 
-    .card_apt{
-        font-weight: 500;
-        font-size: 17px;
-    }
+.card-img-top {
+    border-radius: 5px;
+}
 
-    .card-img-top{
-        border-radius: 5px;
-    }
+.row>* {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
-    .row > *{
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    border-radius: 17px;
+}
 
-    .row{
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        background-color:white;
-        border-radius: 17px;
-    }
+h1 {
+    color: red;
+    font-size: 40px;
+}
 
-    h1{
-        color: red;
-        font-size: 40px;
-    }
-
-    #map {
-            width: 800px;
-            height: 380px;
-        }
+#map {
+    width: 800px;
+    height: 380px;
+}
 </style>
