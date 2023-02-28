@@ -126,7 +126,7 @@
             @enderror
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="latitude" class="form-label">Latitude</label>
             <input type="regex" class="form-control @error('latitude') is-invalid @enderror" id="latitude" name="latitude" value="{{ old('latitude') }}">
             @error('latitude')
@@ -152,7 +152,7 @@
                     </ul>
                 </div>
             @enderror
-        </div>
+        </div> --}}
 
         <div class="mb-3">
             <label for="state" class="form-label">State</label>

@@ -1,7 +1,7 @@
 <template>
     <section class="container">
-        <h1>Apartments</h1>
-        <div class="form-outline">
+        <h1 class="text-center">Apartments</h1>
+        <div class="form-outline w-75 m-auto">
             <input type="text" id="form12" class="form-control" placeholder="Search apartments" v-model="searchTerm"/>
             <label class="form-label" for="form12"></label>
         </div>
@@ -18,9 +18,9 @@
                         :alt="item.title"
                     />
                     <div class="card-body d-flex flex-column justify-content-end">
-                        <h5 class="card-title">{{ item.title }}</h5>
-                        <div class="card-title">City: {{ item.city }}</div>
-                        <div class="card-title">Address: {{ item.address }}</div>
+                        <h4 class="card-title">{{ item.city }}, <span>{{ item.state }}</span></h4>
+                        <!-- <div class="card-title">City: {{ item.city }}</div> -->
+                        <h6 class="card-title">Address: {{ item.address }}</h6>
                         <!-- <p class="card-text flex-grow-1">{{ item.excerpt }}</p> -->
                         <router-link :to="{ name: 'apartment', params: {slug: item.slug}}" class="btn btn-danger">Details</router-link>
                     </div>

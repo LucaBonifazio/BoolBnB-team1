@@ -12171,9 +12171,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "container" }, [
-    _c("h1", [_vm._v("Apartments")]),
+    _c("h1", { staticClass: "text-center" }, [_vm._v("Apartments")]),
     _vm._v(" "),
-    _c("div", { staticClass: "form-outline" }, [
+    _c("div", { staticClass: "form-outline w-75 m-auto" }, [
       _c("input", {
         directives: [
           {
@@ -12221,15 +12221,12 @@ var render = function () {
                         "card-body d-flex flex-column justify-content-end",
                     },
                     [
-                      _c("h5", { staticClass: "card-title" }, [
-                        _vm._v(_vm._s(item.title)),
+                      _c("h4", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(item.city) + ", "),
+                        _c("span", [_vm._v(_vm._s(item.state))]),
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "card-title" }, [
-                        _vm._v("City: " + _vm._s(item.city)),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-title" }, [
+                      _c("h6", { staticClass: "card-title" }, [
                         _vm._v("Address: " + _vm._s(item.address)),
                       ]),
                       _vm._v(" "),
