@@ -11,7 +11,7 @@
                         :alt="results.title"
                     >
                 </div>
-                <div class="col-5 card_apt p-4">
+                <div class="col-5 card_apt">
                     <h1>{{ slug }}</h1>
                     <div>Rooms: {{ results.n_rooms }}</div>
                     <div> Beds: {{ results.n_beds }}</div>
@@ -95,7 +95,7 @@ export default ({
 
     h1{
         color: red;
-        font-size: 45px;
+        font-size: 40px;
     }
 
 </style>

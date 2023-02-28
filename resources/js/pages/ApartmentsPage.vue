@@ -78,11 +78,12 @@ export default {
     },
 
     computed: {
+
         filteredItems() {
             return this.results.data.filter(apartment => {
-                return apartment.title.toLowerCase().includes(this.searchTerm.toLowerCase());
+                return apartment.city.toLowerCase().includes(this.searchTerm.toLowerCase());
             });
-        }
+        },
     }
 };
 </script>

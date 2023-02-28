@@ -5282,7 +5282,7 @@ __webpack_require__.r(__webpack_exports__);
     filteredItems: function filteredItems() {
       var _this2 = this;
       return this.results.data.filter(function (apartment) {
-        return apartment.title.toLowerCase().includes(_this2.searchTerm.toLowerCase());
+        return apartment.city.toLowerCase().includes(_this2.searchTerm.toLowerCase());
       });
     }
   }
@@ -10690,7 +10690,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".card_apt[data-v-ca80d4b0] {\n  font-weight: 500;\n  font-size: 17px;\n}\n.card-img-top[data-v-ca80d4b0] {\n  border-radius: 5px;\n}\n.row > *[data-v-ca80d4b0] {\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 30px;\n  padding-bottom: 30px;\n}\n.row[data-v-ca80d4b0] {\n  display: flex;\n  justify-content: center;\n  gap: 10px;\n  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n  background-color: white;\n  border-radius: 17px;\n}\nh1[data-v-ca80d4b0] {\n  color: red;\n  font-size: 45px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".card_apt[data-v-ca80d4b0] {\n  font-weight: 500;\n  font-size: 17px;\n}\n.card-img-top[data-v-ca80d4b0] {\n  border-radius: 5px;\n}\n.row > *[data-v-ca80d4b0] {\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 30px;\n  padding-bottom: 30px;\n}\n.row[data-v-ca80d4b0] {\n  display: flex;\n  justify-content: center;\n  gap: 10px;\n  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n  background-color: white;\n  border-radius: 17px;\n}\nh1[data-v-ca80d4b0] {\n  color: red;\n  font-size: 40px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12060,7 +12060,7 @@ var render = function () {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col-5 card_apt p-4" },
+              { staticClass: "col-5 card_apt" },
               [
                 _c("h1", [_vm._v(_vm._s(_vm.slug))]),
                 _vm._v(" "),

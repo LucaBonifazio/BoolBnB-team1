@@ -29,6 +29,6 @@
     {{ $views->links() }}
 
     <div>
-        <a href="{{ route('admin.views.index') }}" class="btn btn-info">Back to apartment</a>
+        <a href="{{ route('admin.apartments.index') }}" class="btn btn-info">Back to apartment</a>
     </div>
 @endsection
