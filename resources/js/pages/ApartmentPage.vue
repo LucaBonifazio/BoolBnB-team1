@@ -9,13 +9,20 @@
                 </div>
                 <div class="col-5 card_apt">
                     <h1>{{ slug }}</h1>
+                    <div>City: {{ results.city }}</div>
+                    <div>Address: {{ results.address }} N. {{ results.apartment_number }}</div>
                     <div>Rooms: {{ results.n_rooms }}</div>
                     <div> Beds: {{ results.n_beds }}</div>
                     <font-awesome-icon icon="fa-solid fa-house" />
                     <div>Bathrooms: {{ results.n_bathrooms }}</div>
                     <div>Square Meters: {{ results.square_meters }}</div>
-                    <div>City: {{ results.city }}</div>
-                    <div>Address: {{ results.address }} N. {{ results.apartment_number }}</div>
+                    <div>Services:
+                        <ul>
+                            <li v-for="service in results.services" :key="service.id">
+                                {{ service.name }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id="map" class="map"></div>

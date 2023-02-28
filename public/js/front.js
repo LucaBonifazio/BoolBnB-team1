@@ -5172,6 +5172,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 // import Page404 from './Page404.vue';
 
@@ -5270,6 +5277,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5293,7 +5301,10 @@ __webpack_require__.r(__webpack_exports__);
     filteredItems: function filteredItems() {
       var _this2 = this;
       return this.results.data.filter(function (apartment) {
-        return apartment.city.toLowerCase().includes(_this2.searchTerm.toLowerCase());
+        var address = apartment.address.toLowerCase();
+        var city = apartment.city.toLowerCase();
+        var searchTerm = _this2.searchTerm.toLowerCase();
+        return address.includes(searchTerm) || city.includes(searchTerm);
       });
     }
   }
@@ -12075,6 +12086,17 @@ var render = function () {
               [
                 _c("h1", [_vm._v(_vm._s(_vm.slug))]),
                 _vm._v(" "),
+                _c("div", [_vm._v("City: " + _vm._s(_vm.results.city))]),
+                _vm._v(" "),
+                _c("div", [
+                  _vm._v(
+                    "Address: " +
+                      _vm._s(_vm.results.address) +
+                      " N. " +
+                      _vm._s(_vm.results.apartment_number)
+                  ),
+                ]),
+                _vm._v(" "),
                 _c("div", [_vm._v("Rooms: " + _vm._s(_vm.results.n_rooms))]),
                 _vm._v(" "),
                 _c("div", [_vm._v(" Beds: " + _vm._s(_vm.results.n_beds))]),
@@ -12091,14 +12113,20 @@ var render = function () {
                   _vm._v("Square Meters: " + _vm._s(_vm.results.square_meters)),
                 ]),
                 _vm._v(" "),
-                _c("div", [_vm._v("City: " + _vm._s(_vm.results.city))]),
-                _vm._v(" "),
                 _c("div", [
-                  _vm._v(
-                    "Address: " +
-                      _vm._s(_vm.results.address) +
-                      " N. " +
-                      _vm._s(_vm.results.apartment_number)
+                  _vm._v("Services:\n                    "),
+                  _c(
+                    "ul",
+                    _vm._l(_vm.results.services, function (service) {
+                      return _c("li", { key: service.id }, [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(service.name) +
+                            "\n                        "
+                        ),
+                      ])
+                    }),
+                    0
                   ),
                 ]),
               ],
@@ -12199,6 +12227,10 @@ var render = function () {
                       _vm._v(" "),
                       _c("div", { staticClass: "card-title" }, [
                         _vm._v("City: " + _vm._s(item.city)),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-title" }, [
+                        _vm._v("Address: " + _vm._s(item.address)),
                       ]),
                       _vm._v(" "),
                       _c(

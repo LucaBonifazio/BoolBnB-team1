@@ -20,6 +20,7 @@
                     <div class="card-body d-flex flex-column justify-content-end">
                         <h5 class="card-title">{{ item.title }}</h5>
                         <div class="card-title">City: {{ item.city }}</div>
+                        <div class="card-title">Address: {{ item.address }}</div>
                         <!-- <p class="card-text flex-grow-1">{{ item.excerpt }}</p> -->
                         <router-link :to="{ name: 'apartment', params: {slug: item.slug}}" class="btn btn-danger">Details</router-link>
                     </div>
@@ -81,10 +82,13 @@ export default {
     computed: {
 
         filteredItems() {
-            return this.results.data.filter(apartment => {
-                return apartment.city.toLowerCase().includes(this.searchTerm.toLowerCase());
-            });
-        },
+    return this.results.data.filter(apartment => {
+        const address = apartment.address.toLowerCase();
+        const city = apartment.city.toLowerCase();
+        const searchTerm = this.searchTerm.toLowerCase();
+        return address.includes(searchTerm) || city.includes(searchTerm);
+    });
+},
     }
 };
 </script>
