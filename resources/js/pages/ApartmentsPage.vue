@@ -101,6 +101,10 @@ export default {
 
     .apt-card{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        &:hover {
+            transform: scale(1.05);
+            transition: 1.5s;
+        }
     }
 
     .btn-danger{

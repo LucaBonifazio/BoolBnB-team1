@@ -10736,7 +10736,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".pagination[data-v-34f6110e] {\n  cursor: pointer;\n}\n.apt-card[data-v-34f6110e] {\n  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n}\n.btn-danger[data-v-34f6110e] {\n  --bs-btn-bg: #bd1c1c;\n  --bs-btn-hover-bg: rgb(245, 245, 245);\n  --bs-btn-hover-color: #bd1c1c;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".pagination[data-v-34f6110e] {\n  cursor: pointer;\n}\n.apt-card[data-v-34f6110e] {\n  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\n}\n.apt-card[data-v-34f6110e]:hover {\n  transform: scale(1.05);\n  transition: 1.5s;\n}\n.btn-danger[data-v-34f6110e] {\n  --bs-btn-bg: #bd1c1c;\n  --bs-btn-hover-bg: rgb(245, 245, 245);\n  --bs-btn-hover-color: #bd1c1c;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
