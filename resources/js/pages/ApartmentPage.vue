@@ -23,10 +23,8 @@
                     <div>Latitude: {{ results.latitude }} Longitude: {{ results.longitude }}</div>
                 </div>
             </div>
-
+            <div id="map" class="map"></div>
         </div>
-
-
         <!-- <div v-else-if="!results">
             <Page404/>
         </div> -->
@@ -35,6 +33,23 @@
         </div>
     </section>
 </template>
+
+<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps-web.min.js">
+import tt from "@tomtom-international/web-sdk-maps"
+
+let center = [9.135752487471335, 45.46166580610122] //TODO: mettere latitude, longitude come variabili
+
+const map = tt.map({
+    key: "gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr",
+    container: "map",
+    center: center,
+    zoom: 17,
+})
+map.on('load', () => {
+            var marker = new tt.Marker().setLngLat(center).addTo(map)
+        })
+
+</script>
 
 <script>
 // import Page404 from './Page404.vue';
@@ -98,4 +113,8 @@ export default ({
         font-size: 40px;
     }
 
+    #map {
+            width: 800px;
+            height: 380px;
+        }
 </style>
