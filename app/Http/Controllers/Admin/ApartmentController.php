@@ -120,6 +120,7 @@ class ApartmentController extends Controller
     public function edit(Apartment $apartment)
     {
         $services = Service::all();
+        if (Auth::id() !== $apartment->user_id) abort(401);
 
         return view('admin.apartments.edit', [
             'apartment' => $apartment,
@@ -133,6 +134,7 @@ class ApartmentController extends Controller
         $this->validation_update['slug'][] = Rule::unique('apartments')->ignore($apartment);
         $request->validate($this->validation_update);
         $request->validate($this->validation);
+        if (Auth::id() !== $apartment->user_id) abort(401);
 
         $data = $request->all();
 
@@ -173,6 +175,7 @@ class ApartmentController extends Controller
 
     public function destroy(Apartment $apartment)
     {
+        if (Auth::id() !== $apartment->user_id) abort(401);
         $apartment->services()->detach();
         $apartment->delete();
 
