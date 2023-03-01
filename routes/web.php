@@ -32,6 +32,7 @@ Route::middleware('auth')
         Route::resource('services', 'ServiceController');
         Route::resource('views', 'ViewController');
         Route::resource('sponsorships', 'SponsorshipController');
+        Route::resource('checkouts', 'CheckoutController');
 });
 
 Route::get('{any?}', function() {

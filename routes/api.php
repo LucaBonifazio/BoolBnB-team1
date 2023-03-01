@@ -21,3 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/apartments', 'Api\ApartmentController@index')->name('apartment.index');
 Route::get('/apartments/random', 'Api\ApartmentController@random')->name('apartments.random');
 Route::get('/apartments/{apartment}', 'Api\ApartmentController@show')->name('apartment.show');
+
+
+Route::get('sponsorships', 'Api\Sponsorships\SponsorshipController@index');
+Route::get('orders/generate', 'Api\Orders\OrderController@generate');
+Route::post('orders/make/payment', 'Api\Orders\OrderController@makePayment');
+
+

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Sponsorships type</h1>
+    <h1>Sponsorships apartments</h1>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -20,8 +20,7 @@
                     <td>{{ $sponsorship->type }}</td>
                     <td>{{ $sponsorship->price }} €</td>
                     <td>{{ $sponsorship->sponsor_time }} hours</td>
-                    <td><a href="{{ route('admin.apartments.index') }}" class="btn btn-primary">Buy</a></td>
-                    {{-- TODO inserire API pagamento --}}
+                    <td><a href="{{ route('admin.checkouts.index') }}" class="btn btn-primary">Buy</a></td>
                 </tr>
             @endforeach
         </tbody>
