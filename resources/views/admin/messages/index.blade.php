@@ -2,7 +2,12 @@
 
 @section('content')
 <h1>{{ Auth::user()->name }}'s messages</h1>
-
+@if($messages->isEmpty())
+    <p>No messages to display, <a href="{{ route('admin.messages.create') }}">click here to create!</a></p>
+    <div>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-info">Back to dashboard</a>
+    </div>
+@else
     <table class="table table-striped">
         <thead>
             <tr>
@@ -35,4 +40,6 @@
     @include('admin.partials.delete_confirmation', [
         'delete_name' => 'message',
     ])
+
+@endif
 @endsection
