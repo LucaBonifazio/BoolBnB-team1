@@ -20,7 +20,7 @@
                     <td>{{ $sponsorship->type }}</td>
                     <td>{{ $sponsorship->price }} €</td>
                     <td>{{ $sponsorship->sponsor_time }} hours</td>
-                    <td><a href="{{ route('admin.checkouts.index') }}" class="btn btn-primary">Buy</a></td>
+                    <td><a href="{{ route('admin.sponsorships.show', ['sponsorship' => $sponsorship]) }}" class="btn btn-primary">Buy</a></td>
                 </tr>
             @endforeach
         </tbody>
