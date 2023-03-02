@@ -13,11 +13,11 @@
         required: true
       },
       longitude: {
-        type: Number,
+        type: String,
         required: true
       },
       latitude: {
-        type: Number,
+        type: String,
         required: true
       }
     },

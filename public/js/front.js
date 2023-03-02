@@ -5109,11 +5109,11 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     },
     longitude: {
-      type: Number,
+      type: String,
       required: true
     },
     latitude: {
-      type: Number,
+      type: String,
       required: true
     }
   },

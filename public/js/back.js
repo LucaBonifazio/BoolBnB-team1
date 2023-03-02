@@ -10579,17 +10579,17 @@ if (eleOverlay) {
 // const longitude = document.querySelector('.longitude');
 
 // let center = [latitude, longitude]
-var center = [9.135752487471335, 45.46166580610122]; //TODO: mettere latitude, longitude come variabili
+// let center = [9.135752487471335, 45.46166580610122] //TODO: mettere latitude, longitude come variabili
 
-var map = tt.map({
-  key: "gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr",
-  container: "map",
-  center: center,
-  zoom: 17
-});
-map.on('load', function () {
-  var marker = new tt.Marker().setLngLat(center).addTo(map);
-});
+// const map = tt.map({
+//     key: "gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr",
+//     container: "map",
+//     center: center,
+//     zoom: 17,
+// })
+// map.on('load', () => {
+//             var marker = new tt.Marker().setLngLat(center).addTo(map)
+//         })
 })();
 
 /******/ })()
