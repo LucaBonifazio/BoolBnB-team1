@@ -72,7 +72,7 @@
 
         <div class="mb-3">
             <label for="n_rooms" class="form-label">Rooms</label>
-            <input type="number" class="form-control @error('n_rooms') is-invalid @enderror" id="n_rooms" name="n_rooms"  value="{{ old('n_rooms') }}"  min="1" max="10">
+            <input type="number" class="form-control @error('n_rooms') is-invalid @enderror" id="n_rooms" name="n_rooms"  value="{{ old('n_rooms') }}"  min="1" max="100">
             @error('n_rooms')
                 <div class="invalid-feedback">
                     <ul>
@@ -86,7 +86,7 @@
 
         <div class="mb-3">
             <label for="n_beds" class="form-label">Beds</label>
-            <input type="number" class="form-control @error('n_beds') is-invalid @enderror" id="n_beds" name="n_beds"  value="{{ old('n_beds') }}"  min="1" max="10">
+            <input type="number" class="form-control @error('n_beds') is-invalid @enderror" id="n_beds" name="n_beds"  value="{{ old('n_beds') }}"  min="1" max="100">
             @error('n_beds')
                 <div class="invalid-feedback">
                     <ul>
@@ -100,7 +100,7 @@
 
         <div class="mb-3">
             <label for="n_bathrooms" class="form-label">Baths</label>
-            <input type="number" class="form-control @error('n_bathrooms') is-invalid @enderror" id="n_bathrooms" name="n_bathrooms"  value="{{ old('n_bathrooms') }}"  min="1" max="10">
+            <input type="number" class="form-control @error('n_bathrooms') is-invalid @enderror" id="n_bathrooms" name="n_bathrooms"  value="{{ old('n_bathrooms') }}"  min="1" max="100">
             @error('n_bathrooms')
                 <div class="invalid-feedback">
                     <ul>
@@ -114,7 +114,7 @@
 
         <div class="mb-3">
             <label for="square_meters" class="form-label">Square Meters</label>
-            <input type="number" class="form-control @error('square_meters') is-invalid @enderror" id="square_meters" name="square_meters"  value="{{ old('square_meters') }}"  min="50" max="1000">
+            <input type="number" class="form-control @error('square_meters') is-invalid @enderror" id="square_meters" name="square_meters"  value="{{ old('square_meters') }}"  min="50" max="90000">
             @error('square_meters')
                 <div class="invalid-feedback">
                     <ul>

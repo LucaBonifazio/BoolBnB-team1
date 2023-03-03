@@ -5194,6 +5194,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -5211,6 +5213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Map */ "./resources/js/components/Map.vue");
+//
 //
 //
 //
@@ -5268,6 +5271,7 @@ __webpack_require__.r(__webpack_exports__);
     axios.get(this.urlApi).then(function (axiosResponse) {
       if (axiosResponse.data.success) {
         _this.results = axiosResponse.data.results;
+        console.log(_this.results);
       }
     });
   },
@@ -5287,7 +5291,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -5459,27 +5462,27 @@ __webpack_require__(/*! ./common */ "./resources/js/common.js");
 
 vue__WEBPACK_IMPORTED_MODULE_4__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
 var routes = [{
-  path: '/',
-  name: 'homepage',
+  path: "/",
+  name: "homepage",
   component: _pages_PageHome__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
-  path: '/apartments',
-  name: 'apartments',
+  path: "/apartments",
+  name: "apartments",
   component: _pages_ApartmentsPage__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
-  path: '/apartments/:slug',
-  name: 'apartment',
+  path: "/apartments/:slug",
+  name: "apartment",
   component: _pages_ApartmentPage__WEBPACK_IMPORTED_MODULE_3__["default"],
   props: true
 }];
 
 // personalizzazione del vue-router
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]({
-  mode: 'history',
+  mode: "history",
   routes: routes
 });
 new vue__WEBPACK_IMPORTED_MODULE_4__["default"]({
-  el: '#app',
+  el: "#app",
   render: function render(h) {
     return h(_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
   },
@@ -10855,7 +10858,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#map {\n  min-height: 100%;\n  min-width: 100%;\n}\n.b-round{\n    border-radius: 15px;\n}\n.b-shadow {\n    box-shadow: 0px 0px 50px 1px rgb(201, 200, 200);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#map {\n    min-height: 100%;\n    min-width: 100%;\n}\n.b-round {\n    border-radius: 15px;\n}\n.b-shadow {\n    box-shadow: 0px 0px 50px 1px rgb(201, 200, 200);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12320,7 +12323,12 @@ var render = function () {
               _c("div", { staticClass: "col-6 card_apt" }, [
                 _c("img", {
                   staticClass: "card-img-top",
-                  attrs: { src: _vm.results.picture, alt: _vm.results.title },
+                  attrs: {
+                    src: _vm.results.uploaded_image
+                      ? "/storage/" + _vm.results.uploaded_image
+                      : _vm.results.picture,
+                    alt: _vm.results.title,
+                  },
                 }),
               ]),
               _vm._v(" "),
@@ -12465,7 +12473,12 @@ var render = function () {
                 _c("div", { staticClass: "card h-100" }, [
                   _c("img", {
                     staticClass: "card-img-top",
-                    attrs: { src: item.picture, alt: item.title },
+                    attrs: {
+                      src: item.uploaded_image
+                        ? "/storage/" + item.uploaded_image
+                        : item.picture,
+                      alt: item.title,
+                    },
                   }),
                   _vm._v(" "),
                   _c(
@@ -12562,7 +12575,12 @@ var render = function () {
               },
               [
                 _c("img", {
-                  attrs: { src: apartment.picture, alt: apartment.title },
+                  attrs: {
+                    src: apartment.uploaded_image
+                      ? "/storage/" + apartment.uploaded_image
+                      : apartment.picture,
+                    alt: apartment.title,
+                  },
                 }),
               ]
             ),

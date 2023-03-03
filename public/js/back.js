@@ -10535,27 +10535,27 @@ var __webpack_exports__ = {};
   !*** ./resources/js/back.js ***!
   \******************************/
 __webpack_require__(/*! ./common */ "./resources/js/common.js");
-var eleOverlay = document.querySelector('.overlay');
+var eleOverlay = document.querySelector(".overlay");
 if (eleOverlay) {
-  var btnsDelete = document.querySelectorAll('.btn_delete');
+  var btnsDelete = document.querySelectorAll(".btn_delete");
   btnsDelete.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      eleOverlay.classList.remove('d-none');
-      baseUrl = 'http://localhost:8000/admin/';
-      if (eleOverlay.querySelector('form').classList.contains('apartment')) {
-        baseUrl += 'apartments/';
+    btn.addEventListener("click", function () {
+      eleOverlay.classList.remove("d-none");
+      baseUrl = "http://localhost:8000/admin/";
+      if (eleOverlay.querySelector("form").classList.contains("apartment")) {
+        baseUrl += "apartments/";
         // } else if (eleOverlay.querySelector('form').classList.contains('category')) {
         //     baseUrl += 'categories/';
         // } else if (eleOverlay.querySelector('form').classList.contains('tag')) {
         //     baseUrl += 'tags/';
       }
 
-      eleOverlay.querySelector('form').setAttribute('action', baseUrl + this.dataset.id);
+      eleOverlay.querySelector("form").setAttribute("action", baseUrl + this.dataset.id);
     });
   });
-  var eleBtnClose = eleOverlay.querySelector('.btn_close');
-  eleBtnClose.addEventListener('click', function () {
-    eleOverlay.classList.add('d-none');
+  var eleBtnClose = eleOverlay.querySelector(".btn_close");
+  eleBtnClose.addEventListener("click", function () {
+    eleOverlay.classList.add("d-none");
   });
 }
 
@@ -10576,20 +10576,20 @@ if (eleOverlay) {
 // });
 
 // const latitude = document.querySelector('.latitude');
-// const longitude = document.querySelector('.longitude');
+// const longitude = document.querySelector(".longitude");
 
-// let center = [latitude, longitude]
-// let center = [9.135752487471335, 45.46166580610122] //TODO: mettere latitude, longitude come variabili
+// let center = [latitude, longitude];
+// let center = [9.135752487471335, 45.46166580610122]; //TODO: mettere latitude, longitude come variabili
 
 // const map = tt.map({
 //     key: "gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr",
 //     container: "map",
 //     center: center,
 //     zoom: 17,
-// })
-// map.on('load', () => {
-//             var marker = new tt.Marker().setLngLat(center).addTo(map)
-//         })
+// });
+// map.on("load", () => {
+//     var marker = new tt.Marker().setLngLat(center).addTo(map);
+// });
 })();
 
 /******/ })()

@@ -3,8 +3,10 @@
         <nav class="navbar navbar-expand-md bg-body-tertiary">
             <div class="container-fluid">
                 <router-link :to="{ name: 'homepage' }" class="navbar-brand logo">BoolBnB</router-link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -31,26 +33,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: red;
+    text-decoration: none;
+}
 
-    .logo{
-        font-size: 2rem;
-        font-weight: 700;
-        color: red;
-        text-decoration: none;
-    }
+.navbar {
+    box-shadow: rgb(148 148 148 / 35%) 0px 5px 15px;
+    margin-bottom: 30px;
+    background-color: white;
+}
 
-    .navbar{
-        box-shadow: rgb(148 148 148 / 35%) 0px 5px 15px;
-        margin-bottom: 30px;
-        background-color: white;
-    }
+.navbar-brand:focus {
+    color: red;
+}
 
-    .navbar-brand:focus {
-        color: red;
-    }
-
-    .navbar-brand:hover {
-        color: black;
-    }
-
+.navbar-brand:hover {
+    color: black;
+}
 </style>

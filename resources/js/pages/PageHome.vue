@@ -4,7 +4,7 @@
         <div class="grid h-100 container">
             <div v-for="apartment in arrRandom" :key="apartment.id" class="tile">
                 <router-link :to="{ name: 'apartment', params: {slug: apartment.slug}}">
-                    <img :src="apartment.picture" :alt="apartment.title"/>
+                    <img :src="apartment.uploaded_image ? '/storage/' + apartment.uploaded_image : apartment.picture" :alt="apartment.title" />
                 </router-link>
             </div>
         </div>

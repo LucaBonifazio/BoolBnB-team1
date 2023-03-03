@@ -81,7 +81,7 @@ class ApartmentController extends Controller
         $request->validate($this->validation_store);
 
         $data = $request->all();
-        $img_path = Storage::put('uploads', $data['uploaded_image']);
+        // $img_path = Storage::put('uploads', $data['uploaded_image']);
         // Le righe di codice sottostante funzionano per windows 11, per gli altri non serve
         // $img_path = Storage::put('public/uploads', $data['uploaded_image']);
         // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
@@ -105,7 +105,9 @@ class ApartmentController extends Controller
         $apartment->apartment_number =    $data['apartment_number'];
         $apartment->save();
 
-        $apartment->services()->attach($data['services']);
+        if (isset($data['services'])) {
+            $apartment->services()->attach($data['services']);
+        }
 
         return redirect()->route('admin.apartments.show', ['apartment' => $apartment]);
     }

@@ -5,7 +5,8 @@
         <div v-if="results">
             <div class="row">
                 <div class="col-6 card_apt">
-                    <img :src="results.picture" class="card-img-top" :alt="results.title">
+                    <img :src="results.uploaded_image ? '/storage/' + results.uploaded_image : results.picture"
+                        class="card-img-top" :alt="results.title">
                 </div>
                 <div class="col-5 card_apt">
                     <h1>{{ slug }}</h1>
@@ -57,8 +58,10 @@ export default ({
         axios.get(this.urlApi).then((axiosResponse) => {
             if (axiosResponse.data.success) {
                 this.results = axiosResponse.data.results;
+                console.log(this.results);
             }
         });
+
     },
 
     props: [
