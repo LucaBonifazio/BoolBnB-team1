@@ -19,10 +19,12 @@ class MessageController extends Controller
     {
         $messages = Message::where('apartment_id', Auth::id())->paginate();
         $apartments = Apartment::all();
+        $users = Auth::id();
 
         return view('admin.messages.index', [
             'messages' => $messages,
-            'apartments' => $apartments
+            'apartments' => $apartments,
+            'users' => $users
         ]);
 
     }
@@ -49,10 +51,10 @@ class MessageController extends Controller
     }
 
 
-    public function show(Message $message)
-    {
-        return view('admin.messages.show', compact('message'));
-    }
+    // public function show(Message $message)
+    // {
+    //     return view('admin.messages.show', compact('message'));
+    // }
 
 
     public function destroy(Message $message)

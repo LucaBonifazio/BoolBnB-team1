@@ -2,44 +2,55 @@
 
 @section('content')
 <h1>{{ Auth::user()->name }}'s messages</h1>
-@if($messages->isEmpty())
-    <p>No messages to display, <a href="{{ route('admin.messages.create') }}">click here to create!</a></p>
-    <div>
-        <a href="{{ route('admin.dashboard') }}" class="btn btn-info">Back to dashboard</a>
-    </div>
-@else
+    @if($messages->isEmpty())
+        <p>No messages to display</p>
+        <div>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-info">Back to dashboard</a>
+        </div>
+    @else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Message</th>
-                <th scope="col">Date</th>
+                <th scope="col">Apartment name</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Messages</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($messages as $message)
+            @foreach ($apartments as $apartment)
                 <tr>
-                    <th scope="row">{{ $message->id }}</th>
-                    <td>{{ $message->message }}</td>
-                    <td>{{ $message->date }}</td>
+                    <th scope="row">{{ $apartment->title }}</th>
+                    <td>{{ $apartment->user->name }}</td>
+                    <td>{{ $apartment->address }}</td>
+                    <td>{{ $apartment->city }}</td>
                     <td>
-                        <a href="{{ route('admin.messages.show', ['message' => $message]) }}" class="btn btn-primary">Show</a>
-                        <button class="btn btn-danger btn_delete" data-id="{{ $message->slug}}">Delete</button>
+                        <ul>
+                            @foreach ($apartment->messages as $message)
+                                <li>{{ $message->message }}</li>
+                            @endforeach
+                        </ul>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn_delete" data-id="{{ $apartment->slug}}">Delete</button>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
-
+    @endif
+    @if ($messages->isEmpty())
+        <p></p>
+    @else
     {{ $messages->links() }}
-
-    <div>
-        <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $message->slug}}">Back to dashboard</a>
-    </div>
+        <div>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Back to dashboard</a>
+        </div>
+    @endif
 
     @include('admin.partials.delete_confirmation', [
-        'delete_name' => 'message',
+        'delete_name' => 'apartment',
     ])
-
-@endif
 @endsection

@@ -2,33 +2,47 @@
 
 @section('content')
 <h1>{{ Auth::user()->name }}'s views</h1>
-
+    @if($views->isEmpty())
+        <p>No views to display</p>
+        <div>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-info">Back to dashboard</a>
+        </div>
+    @else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">ID user</th>
-                <th scope="col">ID apartment</th>
-                <th scope="col">IP address</th>
-                <th scope="col">Action</th>
+                <th scope="col">Apartment ID</th>
+                <th scope="col">User</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Views</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($views as $view)
+            @foreach ($apartments as $apartment)
                 <tr>
-                    <th scope="row">{{ $view->apartment_id }}</th>
-                    <th>{{ $view->apartment->user_id }}</th>
-                    <td>{{ $view->IP }}</td>
+                    <th scope="row">{{ $apartment->title }}</th>
+                    <td>{{ $apartment->user->name }}</td>
+                    <td>{{ $apartment->address }}</td>
+                    <td>{{ $apartment->city }}</td>
                     <td>
-                        <a href="{{ route('admin.views.show', ['view' => $view ]) }}" class="btn btn-primary">Show</a>
+                        <ul>
+                            @foreach ($apartment->views as $view)
+                                <li>IP address: {{ $view->IP }}</li>
+                            @endforeach
+                        </ul>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
-
+    @endif
+    @if ($views->isEmpty())
+        <p></p>
+    @else
     {{ $views->links() }}
-
-    <div>
-        <a href="{{ route('admin.apartments.index') }}" class="btn btn-info">Back to apartment</a>
-    </div>
+        <div>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-info" data-id="{{ $apartment->slug}}">Back to dashboard</a>
+        </div>
+    @endif
 @endsection
