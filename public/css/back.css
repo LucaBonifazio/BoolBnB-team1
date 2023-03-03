@@ -21117,3 +21117,20 @@ readers do not read off random characters that represent icons */
 .fa-steam-symbol:before {
   content: "\f3f6";
 }
+
+.overlay {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.delete_confirmation {
+  margin: auto;
+  padding: 1.5rem;
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 0.5rem;
+}
