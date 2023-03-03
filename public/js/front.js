@@ -5409,6 +5409,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -12559,35 +12561,52 @@ var render = function () {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "grid h-100 container" },
-      _vm._l(_vm.arrRandom, function (apartment) {
-        return _c(
+      {
+        staticClass: "carousel slide",
+        attrs: { id: "carouselExampleSlidesOnly", "data-bs-ride": "carousel" },
+      },
+      [
+        _c(
           "div",
-          { key: apartment.id, staticClass: "tile" },
-          [
-            _c(
-              "router-link",
+          { staticClass: "carousel-inner" },
+          _vm._l(_vm.arrRandom, function (apartment) {
+            return _c(
+              "div",
               {
-                attrs: {
-                  to: { name: "apartment", params: { slug: apartment.slug } },
-                },
+                key: apartment.id,
+                staticClass: "carousel-item",
+                class: { active: apartment === _vm.arrRandom[0] },
               },
               [
-                _c("img", {
-                  attrs: {
-                    src: apartment.uploaded_image
-                      ? "/storage/" + apartment.uploaded_image
-                      : apartment.picture,
-                    alt: apartment.title,
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "apartment",
+                        params: { slug: apartment.slug },
+                      },
+                    },
                   },
-                }),
-              ]
-            ),
-          ],
-          1
-        )
-      }),
-      0
+                  [
+                    _c("img", {
+                      staticClass: "d-block w-100",
+                      attrs: {
+                        src: apartment.uploaded_image
+                          ? "/storage/" + apartment.uploaded_image
+                          : apartment.picture,
+                        alt: apartment.title,
+                      },
+                    }),
+                  ]
+                ),
+              ],
+              1
+            )
+          }),
+          0
+        ),
+      ]
     ),
   ])
 }

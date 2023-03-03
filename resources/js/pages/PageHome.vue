@@ -1,11 +1,13 @@
 <template>
     <div>
         <h1 class="text-center title">Welcome on BoolBnB</h1>
-        <div class="grid h-100 container">
-            <div v-for="apartment in arrRandom" :key="apartment.id" class="tile">
-                <router-link :to="{ name: 'apartment', params: {slug: apartment.slug}}">
-                    <img :src="apartment.uploaded_image ? '/storage/' + apartment.uploaded_image : apartment.picture" :alt="apartment.title" />
-                </router-link>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div v-for="apartment in arrRandom" :key="apartment.id" class="carousel-item" :class="{ active: apartment === arrRandom[0] }">
+                    <router-link :to="{ name: 'apartment', params: {slug: apartment.slug}}">
+                        <img :src="apartment.uploaded_image ? '/storage/' + apartment.uploaded_image : apartment.picture" :alt="apartment.title" class="d-block w-100" />
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>
