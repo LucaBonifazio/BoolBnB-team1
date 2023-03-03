@@ -21,3 +21,6 @@ public/
 
 # esclude la cartella "routes"
 routes/
+
+
+database/

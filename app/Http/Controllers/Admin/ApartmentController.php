@@ -28,16 +28,13 @@ class ApartmentController extends Controller
         'n_bathrooms'       => 'integer|required',
         'square_meters'     => 'integer|required',
         'picture'           => 'url',
-        // 'uploaded_image'    => 'image',
         'visibility'        => 'boolean',
         'latitude'          => 'float|between:-90,90',
         'longitude'         => 'float|between:-180,180',
-        // 'latitude'          => ['required|regex:/^-?\d{1,2}.\d{1,8}$/'],
-        // 'longitude'         => ['required|regex:/^-?\d{1,3}.\d{1,8}$/'],
         'state'             => 'required|string|max:100',
         'city'              => 'required|string|max:200',
         'address'           => 'required|string|max:250',
-        'apartment_number'  => 'integer|required' //TODO:verificare una volta installata l'API
+        'apartment_number'  => 'integer|required'
     ];
 
     private $validation_store = [
@@ -82,11 +79,14 @@ class ApartmentController extends Controller
         $request->validate($this->validation_store);
 
         $data = $request->all();
-        
+
         $img_path = Storage::put('uploads', $data['uploaded_image']);
+
         // Le righe di codice sottostante funzionano per windows 11, per gli altri non serve
+        //--------------------------------------------------------------------------
         // $img_path = Storage::put('public/uploads', $data['uploaded_image']);
         // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
+        //---------------------------------------------------------------------------
 
 
         // Recupera dati api tomtom
@@ -95,7 +95,7 @@ class ApartmentController extends Controller
             'verify' => false
         ]);
 
-        // $response = $client->get("https://api.tomtom.com/search/2/geocode/{$data['address']}.json?key=gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr");
+        $response = $client->get("https://api.tomtom.com/search/2/geocode/{$data['address']}.json?key=gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr");
         $response = $client->get("https://api.tomtom.com/search/2/structuredGeocode.json?streetNumber={$data['apartment_number']}&streetName={$data['address']}&municipality={$data['city']}&countrySubdivision={$data['state']}&countryCode=IT&key=gMfd6J6PIRqQQaAmyKd2WQbENA4FkXwr");
 
         $responseBody = json_decode($response->getBody()->getContents(), true);
@@ -121,11 +121,8 @@ class ApartmentController extends Controller
         $apartment->n_beds           =    $data['n_beds'];
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
-        //$apartment->picture          =    $data['picture'];
         $apartment->uploaded_image   =    $img_path;
         $apartment->visibility       =    isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
-        // $apartment->latitude         =    isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
-        // $apartment->longitude        =    isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
         $apartment->latitude         =    $latitude;
         $apartment->longitude        =    $longitude;
         $apartment->state            =    $data['state'];
@@ -174,8 +171,13 @@ class ApartmentController extends Controller
 
         if (isset($data['uploaded_image'])) {
             $img_path = Storage::put('uploads', $data['uploaded_image']);
+
+            // Le righe di codice sottostante funzionano per windows 11, per gli altri non serve
+            //--------------------------------------------------------------------------
             // $img_path = Storage::put('public/uploads', $data['uploaded_image']);
             // $img_path = isset($img_path) ? str_replace('public/', '', $img_path) : null;
+            //---------------------------------------------------------------------------
+
             Storage::delete($apartment->uploaded_image);
         } else {
             $img_path = $apartment->uploaded_image;
@@ -212,11 +214,8 @@ class ApartmentController extends Controller
         $apartment->n_beds           =    $data['n_beds'];
         $apartment->n_bathrooms      =    $data['n_bathrooms'];
         $apartment->square_meters    =    $data['square_meters'];
-        //$apartment->picture          =    $data['picture'];
         $apartment->uploaded_image   =    $img_path;
         $apartment->visibility       =    isset($data['visibility']) && $data['visibility'] !== '' ? $data['visibility'] : 1;
-        // $apartment->latitude         =    isset($data['latitude']) && $data['latitude'] !== '' ? (float) $data['latitude'] : null;
-        // $apartment->longitude        =    isset($data['longitude']) && $data['longitude'] !== '' ? (float) $data['longitude'] : null;
         $apartment->latitude = $latitude;
         $apartment->longitude = $longitude;
         $apartment->state            =    $data['state'];
