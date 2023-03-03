@@ -18,6 +18,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/back.css') }}" rel="stylesheet">
+
+    <!-- includes the Braintree JS client SDK -->
+    <script src="https://js.braintreegateway.com/web/dropin/1.34.0/js/dropin.min.js"></script>
+
+    <!-- includes jQuery -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id="app">

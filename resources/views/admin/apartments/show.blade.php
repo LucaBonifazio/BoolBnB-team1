@@ -34,7 +34,7 @@
                         @endif
                     </div>
                 </div>
-            <div id="map" class="map mt-3" style='width: 100%; height: 600px; border-radius: 10px;'></div>
+            {{-- <div id="map" class="map mt-3" style='width: 100%; height: 600px; border-radius: 10px;'></div> --}}
         </div>
     @else
         <div>
