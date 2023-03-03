@@ -38,10 +38,10 @@ class ViewController extends Controller
     // }
 
 
-    public function show(View $view)
-    {
-        return view('admin.views.show', compact('view'));
-    }
+    // public function show(View $view)
+    // {
+    //     return view('admin.views.show', compact('view'));
+    // }
 
 
     // public function edit(View $view)

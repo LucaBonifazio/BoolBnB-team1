@@ -9,7 +9,7 @@
             <div>
                 <a href="{{ route('admin.dashboard') }}" class="btn btn-info">Back to dashboard</a>
             </div>
-        @else
+    @else
         <table class="table table-striped">
             <thead>
                 <tr>
