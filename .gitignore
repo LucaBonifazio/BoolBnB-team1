@@ -10,3 +10,14 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+# esclude la cartella "app"
+app/
+
+# esclude la cartella "resources"
+resources/
+
+# esclude la cartella "public"
+public/
+
+# esclude la cartella "routes"
+routes/

@@ -15,7 +15,7 @@ class ViewController extends Controller
     public function index()
     {
         $views = View::where('apartment_id', Auth::id())->paginate();
-        $apartments = Apartment::all();
+        $apartments = Apartment::where('user_id', Auth::id())->paginate();
         $users = User::all();
 
         return view('admin.views.index',[

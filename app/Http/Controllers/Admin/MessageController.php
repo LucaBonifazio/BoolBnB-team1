@@ -18,7 +18,7 @@ class MessageController extends Controller
     public function index()
     {
         $messages = Message::where('apartment_id', Auth::id())->paginate();
-        $apartments = Apartment::all();
+        $apartments = Apartment::where('user_id', Auth::id())->paginate();
         $users = Auth::id();
 
         return view('admin.messages.index', [
