@@ -1,8 +1,9 @@
 <template>
     <section>
-        <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <router-link :to="{ name: 'homepage' }" class="navbar-brand logo">BoolBnB</router-link>
+                <router-link :to="{ name: 'homepage' }"
+                    class="navbar-brand logo hover-underline-animation">BoolBnB</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -33,10 +34,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .logo {
+    font-family: 'Lobster', cursive;
     font-size: 2rem;
     font-weight: 700;
-    color: red;
+    // color: red;
     text-decoration: none;
 }
 
@@ -52,5 +56,29 @@ export default {
 
 .navbar-brand:hover {
     color: black;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 </style>
