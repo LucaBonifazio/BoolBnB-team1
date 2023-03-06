@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            <h2 class="mt-5">
+            <h2 class="mt-5" style="font-family: 'Bree Serif', serif;">
                 Welcome in BoolBnB {{ $user->name }}!
             </h2>
         </div>

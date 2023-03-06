@@ -70,6 +70,16 @@ export default ({
 </script>
 
 <style lang="scss" scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    font-family: 'Bree Serif', serif;
+}
+
+.container {
+    margin-top: 100px;
+}
 .card_apt {
     font-weight: 500;
     font-size: 17px;
@@ -96,7 +106,7 @@ export default ({
 }
 
 h1 {
-    color: red;
+    color: brown;
     font-size: 40px;
 }
 

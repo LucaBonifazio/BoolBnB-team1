@@ -7,16 +7,22 @@
         <main>
             <router-view></router-view>
         </main>
+
+        <footer>
+            <Footer/>
+        </footer>
     </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
     Navbar,
+    Footer,
   },
 }
 </script>
@@ -32,6 +38,10 @@ export default {
 
     body{
         background-color:rgb(245, 245, 245);
+    }
+
+    main {
+        margin-top: 100px;
     }
 
 
