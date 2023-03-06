@@ -93,6 +93,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    font-family: 'Bree Serif', serif;
+}
 .container {
     margin-top: 100px;
 }
@@ -106,8 +112,8 @@ export default {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     &:hover {
-        transform: scale(1.05);
-        transition: 1.5s;
+        transform: scale(1.03);
+        transition: 0.7s;
     }
 }
 
