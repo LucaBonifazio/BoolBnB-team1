@@ -36,7 +36,7 @@
     <div class="container">
                 <h1 class="text-center title fontperintro" style="font-family: 'Caveat', cursive; color: #0087CA;">Welcome on BoolBnB</h1>
         <div class="container">
-            <h1 class="text-center title">Welcome on BoolBnB</h1>
+
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"
                 style="width: 600px; margin: 0 auto;">
                 <div class="carousel-indicators">

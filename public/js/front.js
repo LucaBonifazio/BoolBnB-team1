@@ -5152,6 +5152,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
@@ -10903,7 +10912,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footer[data-v-61a7c374] {\n  width: 100vw;\n  height: 25vh;\n  background-color: rgb(20, 20, 20);\n  padding-bottom: 0px;\n}\n.container[data-v-61a7c374] {\n  color: rgb(227, 227, 227);\n  font-size: 15px;\n}\nli[data-v-61a7c374] {\n  list-style: none;\n  padding: 5px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".footer[data-v-61a7c374] {\n  width: 100vw;\n  height: 25vh;\n  background-color: rgb(20, 20, 20);\n  padding-bottom: 0px;\n  margin-top: 30px;\n}\nh3[data-v-61a7c374] {\n  color: #0087CA;\n}\n.container[data-v-61a7c374] {\n  color: rgb(227, 227, 227);\n  font-size: 15px;\n}\nli[data-v-61a7c374] {\n  list-style: none;\n  padding: 5px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12405,28 +12414,8 @@ var staticRenderFns = [
           _c("div", { staticClass: "row d-flex justify-content-center pt-4" }, [
             _c("div", { staticClass: "col-3" }, [
               _c("ul", [
-                _c("li", [
-                  _vm._v(
-                    "\n                            lorem ipsum\n                        "
-                  ),
-                ]),
+                _c("li", [_c("h3", [_vm._v("Social")])]),
                 _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            lorem ipsum\n                        "
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "\n                            lorem ipsum\n                        "
-                  ),
-                ]),
-              ]),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-3" }, [
-              _c("ul", [
                 _c("li", [
                   _vm._v(
                     "\n                            lorem ipsum\n                        "
@@ -12449,6 +12438,32 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "col-3" }, [
               _c("ul", [
+                _c("li", [_c("h3", [_vm._v("Contacts")])]),
+                _vm._v(" "),
+                _c("li", [
+                  _vm._v(
+                    "\n                            lorem ipsum\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _vm._v(
+                    "\n                            lorem ipsum\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _vm._v(
+                    "\n                            lorem ipsum\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-3" }, [
+              _c("ul", [
+                _c("li", [_c("h3", [_vm._v("About Us")])]),
+                _vm._v(" "),
                 _c("li", [
                   _vm._v(
                     "\n                            lorem ipsum\n                        "
@@ -12890,10 +12905,6 @@ var render = function () {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "container" }, [
-      _c("h1", { staticClass: "text-center title" }, [
-        _vm._v("Welcome on BoolBnB"),
-      ]),
-      _vm._v(" "),
       _c(
         "div",
         {
