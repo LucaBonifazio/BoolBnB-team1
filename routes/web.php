@@ -32,7 +32,8 @@ Route::middleware('auth')
         Route::resource('services', 'ServiceController');
         Route::resource('views', 'ViewController');
         Route::resource('sponsorships', 'SponsorshipController');
-        Route::resource('checkouts', 'CheckoutController');
+        Route::get('/sponsorships/payment/{value}', 'SponsorshipController@payment')->name('sponsorships.show');
+        Route::post('/checkout', 'SponsorshipController@checkout')->name('sponsorships.checkout');
 });
 
 Route::get('{any?}', function() {

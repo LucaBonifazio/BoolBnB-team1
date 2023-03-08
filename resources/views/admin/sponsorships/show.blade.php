@@ -1,50 +1,82 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container p-5 sponsor-payment">
+        {{-- @if($value == 'Pacchetto Silver')
+            title-silver
+        @elseif($value == 'Pacchetto Gold')
+            title-gold
+        @elseif($value == 'Pacchetto Platinum')
+            title-platinum
+        @endif"> --}}
+        <h1 class="text-center">Pagamento</h1>
 
-<div id="dropin-wrapper">
-    <div id="checkout-message"></div>
-    <div id="dropin-container"></div>
-    <button id="submit-button">Submit payment</button>
-</div>
-  <script>
-    var button = document.querySelector('#submit-button');
+        @if (session('success_message'))
+            <div class="alert alert-success">
+                {{ session('success_message') }}<br>
+                <br><span>Ritorna al tuo <a href="{{ route('admin.apartments.index', ['apartments' => $apartments])}}">profilo</a>.</span>
+            </div>
+        @endif
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all as $error)
+                        <li>{{ $error->message }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <form method="post" id="payment-form" action="{{ url('/admin/checkout') }}">
+            @csrf
+            <section>
+                <label for="amount">
+                    <span class="input-label">Stai acquistando il {{ strtoupper($value) }}.</span>
+                    <div class="input-wrapper amount-wrapper">
+                        <input id="amount" name="amount" type="hidden" min="1" placeholder="Amount" value="@if ($value=='Bronze Sponsorship' ) 2.99 @elseif ($value=='Silver Sponsorship')5.99 @elseif($value=='Gold Sponsorship')9.99 @endif" readonly>
+                    </div>
+                </label>
 
-    braintree.dropin.create({
-      // Insert your tokenization key here
-      authorization: 'sandbox_rzjds9vb_7jxbczhxqzdxss5x',
-      container: '#dropin-container'
-    }, function (createErr, instance) {
-      button.addEventListener('click', function () {
-        instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
-          // When the user clicks on the 'Submit payment' button this code will send the
-          // encrypted payment information in a variable called a payment method nonce
-          $.ajax({
-            type: 'POST',
-            url: '/checkout',
-            data: {'paymentMethodNonce': payload.nonce}
-          }).done(function(result) {
-            // Tear down the Drop-in UI
-            instance.teardown(function (teardownErr) {
-              if (teardownErr) {
-                console.error('Could not tear down Drop-in UI!');
-              } else {
-                console.info('Drop-in UI has been torn down!');
-                // Remove the 'Submit payment' button
-                $('#submit-button').remove();
-              }
+                <div class="bt-drop-in-wrapper">
+                    <div id="bt-dropin"></div>
+                </div>
+            </section>
+            <div class="text-center mt-3">
+                <input id="nonce" name="payment_method_nonce" type="hidden" />
+                <button class="btn btn-success text-center" type="submit"><span>Pagamento</span></button>
+            </div>
+        </form>
+
+    </div>
+    <script src="https://js.braintreegateway.com/web/dropin/1.31.0/js/dropin.min.js"></script>
+        <script>
+            var form = document.querySelector('#payment-form');
+            var client_token = "{{ $token }}";
+
+            braintree.dropin.create({
+                authorization: client_token,
+                selector: '#bt-dropin',
+                paypal: {
+                    flow: 'vault'
+                }
+            }, function(createErr, instance) {
+                if (createErr) {
+                    console.log('Create Error', createErr);
+                    return;
+                }
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    instance.requestPaymentMethod(function(err, payload) {
+                        if (err) {
+                            console.log('Request Payment Method Error', err);
+                            return;
+                        }
+
+                        // Add the nonce to the form and submit
+                        document.querySelector('#nonce').value = payload.nonce;
+                        form.submit();
+                    });
+                });
             });
-
-            if (result.success) {
-              $('#checkout-message').html('<h1>Success</h1><p>Your Drop-in UI is working! Check your <a href="https://sandbox.braintreegateway.com/login%22%3Esandbox Control Panel</a> for your test transactions.</p><p>Refresh to try another transaction.</p>');
-            } else {
-              console.log(result);
-              $('#checkout-message').html('<h1>Error</h1><p>Check your console.</p>');
-            }
-          });
-        });
-      });
-    });
-  </script>
-
+        </script>
 @endsection
