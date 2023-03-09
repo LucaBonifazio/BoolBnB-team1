@@ -56,23 +56,33 @@
         const ctx = document.getElementById('myChart');
 
         new Chart(ctx, {
-            type: 'bar',
-            data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          type: 'bar',
+          data: {
+            labels: [
+                @foreach($apartments as $apartment)
+                    '{{ $apartment->title }}',
+                @endforeach
+            ],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1
+                label: '# Views',
+                data: [
+                    @foreach($apartments as $apartment)
+                        {{ $apartment->views->count() }},
+                    @endforeach
+                ],
+                borderWidth: 1,
+                borderColor: '#36A2EB',
+                backgroundColor: '#9BD0F5',
             }]
-            },
-            options: {
+          },
+          options: {
             scales: {
-                y: {
+              y: {
                 beginAtZero: true
-                }
+              }
             }
-            }
+          }
         });
-    </script>
+      </script>
 
 @endsection
