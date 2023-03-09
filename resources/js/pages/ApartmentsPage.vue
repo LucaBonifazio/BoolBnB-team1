@@ -1,7 +1,7 @@
 <template>
     <section class="container">
 
-        <h1 class="text-center">Apartments</h1>
+        <h1 class="text-center title fontperintro" style="font-family: 'Caveat', cursive; color: #0087CA; font-size: 5rem;">Apartments</h1>
 
         <div class="form-outline w-75 m-auto">
             <input type="text" id="form12" class="form-control" placeholder="Search apartments" v-model="searchTerm" />

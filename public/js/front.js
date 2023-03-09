@@ -5441,40 +5441,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -12436,7 +12402,18 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "container" }, [
-    _c("h1", { staticClass: "text-center" }, [_vm._v("Apartments")]),
+    _c(
+      "h1",
+      {
+        staticClass: "text-center title fontperintro",
+        staticStyle: {
+          "font-family": "'Caveat', cursive",
+          color: "#0087CA",
+          "font-size": "5rem",
+        },
+      },
+      [_vm._v("Apartments")]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "form-outline w-75 m-auto" }, [
       _c("input", {
@@ -12561,96 +12538,117 @@ var render = function () {
       "h1",
       {
         staticClass: "text-center title fontperintro",
-        staticStyle: { "font-family": "'Caveat', cursive", color: "#0087CA" },
+        staticStyle: {
+          "font-family": "'Caveat', cursive",
+          color: "#0087CA",
+          "font-size": "5rem",
+        },
       },
       [_vm._v("Welcome on BoolBnB")]
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      {
+        staticClass: "carousel slide",
+        staticStyle: { "min-width": "400px", margin: "0 auto" },
+        attrs: { id: "carouselExampleSlidesOnly", "data-bs-ride": "carousel" },
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "carousel-indicators" },
+          _vm._l(_vm.arrRandom, function (apartment, index) {
+            return _c("button", {
+              key: apartment.id,
+              class: { active: index === 0 },
+              attrs: {
+                type: "button",
+                "data-bs-target": "#carouselExampleSlidesOnly",
+                "data-bs-slide-to": index,
+                "aria-label": "Slide " + (index + 1),
+              },
+            })
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "carousel-inner" },
+          _vm._l(_vm.arrRandom, function (apartment, index) {
+            return _c(
+              "div",
+              {
+                key: apartment.id,
+                staticClass: "carousel-item",
+                class: { active: index === 0 },
+              },
+              [
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "apartment",
+                        params: { slug: apartment.slug },
+                      },
+                    },
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "d-block w-100",
+                      attrs: {
+                        src: apartment.uploaded_image
+                          ? "/storage/" + apartment.uploaded_image
+                          : apartment.picture,
+                        alt: apartment.title,
+                      },
+                    }),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "carousel-caption d-none d-md-block" },
+                  [
+                    _c("h5", [_vm._v(_vm._s(apartment.title))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(apartment.description))]),
+                  ]
+                ),
+              ],
+              1
+            )
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", [
       _c(
-        "div",
+        "h3",
         {
-          staticClass: "carousel slide",
-          staticStyle: { width: "600px", margin: "0 auto" },
-          attrs: {
-            id: "carouselExampleSlidesOnly",
-            "data-bs-ride": "carousel",
+          staticClass: "mt-4 text-center title fontperintro",
+          staticStyle: {
+            "font-family": "'Caveat', cursive",
+            color: "#0087CA",
+            "font-size": "4rem",
           },
         },
         [
-          _c(
-            "div",
-            { staticClass: "carousel-indicators" },
-            _vm._l(_vm.arrRandom, function (apartment, index) {
-              return _c("button", {
-                key: apartment.id,
-                class: { active: index === 0 },
-                attrs: {
-                  type: "button",
-                  "data-bs-target": "#carouselExampleSlidesOnly",
-                  "data-bs-slide-to": index,
-                  "aria-label": "Slide " + (index + 1),
-                },
-              })
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "carousel-inner" },
-            _vm._l(_vm.arrRandom, function (apartment, index) {
-              return _c(
-                "div",
-                {
-                  key: apartment.id,
-                  staticClass: "carousel-item",
-                  class: { active: index === 0 },
-                },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      attrs: {
-                        to: {
-                          name: "apartment",
-                          params: { slug: apartment.slug },
-                        },
-                      },
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "d-block w-100",
-                        attrs: {
-                          src: apartment.uploaded_image
-                            ? "/storage/" + apartment.uploaded_image
-                            : apartment.picture,
-                          alt: apartment.title,
-                        },
-                      }),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "carousel-caption d-none d-md-block" },
-                    [
-                      _c("h5", [_vm._v(_vm._s(apartment.title))]),
-                      _vm._v(" "),
-                      _c("p", [_vm._v(_vm._s(apartment.description))]),
-                    ]
-                  ),
-                ],
-                1
-              )
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-        ]
+          _vm._v("Visit all\n            "),
+          _c("router-link", { attrs: { to: { name: "apartments" } } }, [
+            _vm._v("apartments\n            "),
+          ]),
+          _vm._v("!!!\n        "),
+        ],
+        1
       ),
     ]),
   ])

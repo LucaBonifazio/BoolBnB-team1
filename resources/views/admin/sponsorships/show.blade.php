@@ -9,12 +9,12 @@
         @elseif($value == 'Pacchetto Platinum')
             title-platinum
         @endif"> --}}
-        <h1 class="text-center">Pagamento</h1>
+        <h1 class="text-center">Payment</h1>
 
         @if (session('success_message'))
             <div class="alert alert-success">
                 {{ session('success_message') }}<br>
-                <br><span>Ritorna al tuo <a href="{{ route('admin.apartments.index', ['apartments' => $apartments])}}">profilo</a>.</span>
+                <br><span>Turn back to your <a href="{{ route('admin.apartments.index', ['apartments' => $apartments])}}">apartments</a>.</span>
             </div>
         @endif
         @if (count($errors) > 0)
@@ -30,7 +30,7 @@
             @csrf
             <section>
                 <label for="amount">
-                    <span class="input-label">Stai acquistando il {{ strtoupper($value) }}.</span>
+                    <span class="input-label">You are buying {{ strtoupper($value) }}.</span>
                     <div class="input-wrapper amount-wrapper">
                         <input id="amount" name="amount" type="hidden" min="1" placeholder="Amount" value="@if ($value=='Bronze Sponsorship' ) 2.99 @elseif ($value=='Silver Sponsorship')5.99 @elseif($value=='Gold Sponsorship')9.99 @endif" readonly>
                     </div>
@@ -42,7 +42,7 @@
             </section>
             <div class="text-center mt-3">
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                <button class="btn btn-success text-center" type="submit"><span>Pagamento</span></button>
+                <button class="btn btn-success text-center" type="submit"><span>Payment</span></button>
             </div>
         </form>
 
