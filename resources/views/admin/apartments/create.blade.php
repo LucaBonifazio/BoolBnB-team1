@@ -33,7 +33,7 @@
         {{-- SLUG section TODO: VEDERE SE RIMUOVENDO LO SLUG DAL CREATE CI SONO PROBLEMI --}}
         <div class="mb-3">
             <label for="slug" class="form-label">Slug</label>
-            <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"  value="{{ old('slug') }}">
+            <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"  value="{{ old('slug') }}" placeholder="Create a custom slug for your Apartment">
             @error('slug')
                 <div class="invalid-feedback">
                     <ul>
